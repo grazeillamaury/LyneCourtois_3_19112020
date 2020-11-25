@@ -1,0 +1,37 @@
+/*Style général*/
+	body{
+		margin: 0px;
+		max-width: 100%;
+		font-family: 'Roboto', sans-serif;
+		background-image: url("../maquettes/Accueil.png");
+		background-attachment: scroll;
+		background-repeat: no-repeat;
+		background-position: top center;
+		background-size: 100%;
+		background-color: #FFFFFF;
+	}
+
+	main{
+		margin-top: 70px;
+	}
+
+	h1{
+		font-family: 'Shrikhand', cursive;
+	}
+
+	a{
+		text-decoration: none;
+	}
+
+
+	header{
+		height: 70px;
+		text-align: center;
+		box-shadow: 0px 1px 4px #cecece;
+		background-color: #FFFFFF;
+		
+		img{
+			width: 45%;
+			padding-top: 25px;
+		}
+	}
