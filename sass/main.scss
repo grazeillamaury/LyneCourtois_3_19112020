@@ -1,18 +1,24 @@
 /*Style général*/
+	$police_roboto : 'Roboto', sans-serif;
+	$color-primary: #9356dc;
+	$color-secondary: #ff79da;
+	$color-tertiary : #99e2d0;
+	$accueil_titre_size: 1.6em;
+
+	*{
+		margin: 0px;
+	}
+
 	body{
 		margin: 0px;
 		max-width: 100%;
-		font-family: 'Roboto', sans-serif;
+		font-family: $police_roboto;
 		background-image: url("../maquettes/Accueil.png");
 		background-attachment: scroll;
 		background-repeat: no-repeat;
 		background-position: top center;
 		background-size: 100%;
 		background-color: #FFFFFF;
-	}
-
-	main{
-		margin-top: 70px;
 	}
 
 	h1{
@@ -23,6 +29,12 @@
 		text-decoration: none;
 	}
 
+	p{
+		font-size: 1.1em;
+	}
+
+
+/*header*/
 
 	header{
 		height: 70px;
@@ -33,5 +45,43 @@
 		img{
 			width: 45%;
 			padding-top: 25px;
+		}
+	}
+
+
+/*Localisation*/
+	.city{
+		text-align: center;
+		padding: 4% 35.5% 4% 28%;
+		background-color: #eaeaea;
+		display: flex;
+		justify-content: space-between;
+	}
+
+
+/*Slogan + lien vers restaurant*/
+	.slogan{
+		padding-top: 10.5%;
+		text-align: center;
+
+		h1{
+			font-family: $police_roboto;
+			font-size: $accueil_titre_size;
+			padding: 0px 17% 0px 13%;
+		}
+
+		p{
+			font-size: 1.26em;
+			padding: 0px 7% 0px 10%;
+			margin: 3% 0px 12% 0px;
+		}
+
+		a{
+			padding: 4.2% 9% ;
+			color: white;
+			font-size: 1.1em;
+			background: linear-gradient( to top, $color-primary, $color-secondary);
+			margin-left: 2%;
+			border-radius: 30px;
 		}
 	}
