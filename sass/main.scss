@@ -13,11 +13,11 @@
 		margin: 0px;
 		max-width: 100%;
 		font-family: $police_roboto;
-		background-image: url("../maquettes/Accueil.png");
+		/*background-image: url("../maquettes/Accueil.png");
 		background-attachment: scroll;
 		background-repeat: no-repeat;
 		background-position: top center;
-		background-size: 100%;
+		background-size: 100%;*/
 		background-color: #FFFFFF;
 	}
 
@@ -63,6 +63,7 @@
 	.slogan{
 		padding: 10.5% 0px 19% 3%;
 		text-align: center;
+		background-color: #f6f6f6;
 
 		h1{
 			font-family: $police_roboto;
@@ -87,5 +88,38 @@
 
 /*Fonctionnement*/
 	.fonctionnement{
-		margin-top: 10%;
+		padding: 13.5% 0px 11.5% 5%;
+
+		h2{
+			font-size: $accueil_titre_size;
+			margin-bottom: 7%;
+		}
+
+		p{
+			padding: 8.5% 0% 6.5%;
+			margin: 0px 5% 6% 4%;
+			background-color: #f6f6f6;
+			display: flex;
+			align-items: center;
+			border-radius: 30px;
+
+			span{
+				margin-left: -4%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 26px;
+				height: 26px;
+				background-color: $color-primary;
+				border-radius: 30px;
+			}
+
+			i{
+				margin: 0px 26px;
+			}
+		}
+	}
+
+	.fa-mobile-alt{
+		font-size: 1.3em;
 	}
