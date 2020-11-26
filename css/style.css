@@ -51,26 +51,29 @@ header img {
 
 /*Slogan + lien vers restaurant*/
 .slogan {
-  padding: 10.5% 0px 19%;
+  padding: 10.5% 0px 19% 3%;
   text-align: center;
 }
 .slogan h1 {
   font-family: "Roboto", sans-serif;
   font-size: 1.6em;
-  padding: 0px 17% 0px 13%;
+  padding: 0px 21% 0px 14%;
 }
 .slogan p {
   font-size: 1.26em;
-  padding: 0px 7% 0px 10%;
   margin: 3% 0px 12% 0px;
 }
 .slogan a {
-  padding: 4.2% 9%;
+  padding: 4.2% 6%;
   color: white;
   font-size: 1.1em;
   background: linear-gradient(to top, #9356dc, #ff79da);
-  margin-left: 2%;
   border-radius: 30px;
+}
+
+/*Fonctionnement*/
+.fonctionnement {
+  margin-top: 10%;
 }
 
 /*# sourceMappingURL=style.css.map */
