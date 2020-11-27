@@ -97,6 +97,7 @@ header img {
   height: 26px;
   background-color: #9356dc;
   border-radius: 30px;
+  color: white;
 }
 .fonctionnement p i {
   margin: 0px 26px;
@@ -104,6 +105,63 @@ header img {
 
 .fa-mobile-alt {
   font-size: 1.3em;
+}
+
+/*Restaurants*/
+#restaurant {
+  padding: 14.5% 0px 12.5% 5%;
+  background-color: #f6f6f6;
+}
+#restaurant h2 {
+  font-size: 1.6em;
+  margin-bottom: 6%;
+}
+#restaurant figure {
+  width: 94.5%;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  margin-bottom: 17px;
+  box-shadow: 4px 5px 4px #C6C5C5;
+}
+#restaurant figure figcaption {
+  min-height: 25%;
+  display: flex;
+  padding: 5% 4% 0px;
+  justify-content: space-between;
+  position: relative;
+  background-color: white;
+}
+#restaurant figure figcaption h3 {
+  font-size: 1.2em;
+  margin-bottom: 4px;
+}
+#restaurant figure figcaption p {
+  font-size: 1.15em;
+  color: #2e2e2e;
+}
+#restaurant figure figcaption i {
+  color: #2e2e2e;
+  font-size: 1.6em;
+  padding: 6px 12px;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  font-weight: 100;
+}
+
+.new {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #99e2d0;
+  color: #008766;
+  padding: 4px 9px;
+  border-radius: 2px;
 }
 
 /*# sourceMappingURL=style.css.map */
