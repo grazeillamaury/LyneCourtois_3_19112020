@@ -13,11 +13,11 @@
 		margin: 0px;
 		max-width: 100%;
 		font-family: $police_roboto;
-		background-image: url("../maquettes/Accueil.png");
+		/*background-image: url("../maquettes/Accueil.png");
 		background-attachment: scroll;
 		background-repeat: no-repeat;
 		background-position: top center;
-		background-size: 100%;
+		background-size: 100%;*/
 		background-color: #FFFFFF;
 	}
 
@@ -34,7 +34,7 @@
 	}
 
 
-/*header*/
+/*Header*/
 
 	header{
 		text-align: center;
@@ -187,3 +187,32 @@
 		padding: 4px 9px;
 		border-radius: 2px;
 	}
+
+
+/*Footer*/
+	footer{
+		padding: 6% 0px 6.7% 6.5%;
+		color: white;
+		background-color: #353535;
+
+		h5{
+			font-size: 1.24em;
+			margin-bottom: 19px;
+			font-family: 'Shrikhand', cursive;
+		}
+
+		p{
+			color: white;
+			font-size: 1.11em;
+			margin-bottom: 7px;
+		}
+
+		i{
+			margin-right: 10px;
+		}
+	}
+
+	.fa-hands-helping{
+		font-size: 0.7em;
+	}
+
