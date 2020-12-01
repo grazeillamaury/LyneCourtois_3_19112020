@@ -4,20 +4,20 @@
 	$color-secondary: #ff79da;
 	$color-tertiary : #99e2d0;
 	$accueil_titre_size: 1.6em;
+	$shadow : 4px 5px 4px #C6C5C5; ;
 
 	*{
 		margin: 0px;
 	}
 
 	body{
-		margin: 0px;
 		max-width: 100%;
 		font-family: $police_roboto;
-		background-image: url("../maquettes/Menu-a_la_francaise.png");
+		/*background-image: url("../maquettes/Menu-a_la_francaise.png");
 		background-attachment: scroll;
 		background-repeat: no-repeat;
 		background-position: top center;
-		background-size: 100%;
+		background-size: 100%;*/
 		background-color: #FFFFFF;
 	}
 
@@ -45,6 +45,21 @@
 		
 		img{
 			width: 45%;
+		}
+	}
+
+	.header-menu{
+		display: flex;
+		justify-content: space-between;
+		padding: 6% 26% 2.5% 6.5%;
+
+		img{
+			width: 88%;
+		}
+
+		i{
+			font-size: 1.2em;
+			color: black;
 		}
 	}
 
@@ -102,6 +117,7 @@
 			display: flex;
 			align-items: center;
 			border-radius: 30px;
+			box-shadow: $shadow;
 
 			span{
 				margin-left: -4%;
@@ -146,7 +162,7 @@
 			justify-content: flex-end;
 			position: relative;
 			margin-bottom: 17px;
-			box-shadow: 4px 5px 4px #C6C5C5;
+			box-shadow: $shadow;
 
 			figcaption{
 				min-height: 25%;
@@ -219,21 +235,6 @@
 
 
 /*pages menus*/
-	.header-menu{
-		display: flex;
-		justify-content: space-between;
-		padding: 6% 26% 2.5% 6.5%;
-
-		img{
-			width: 88%;
-		}
-
-		i{
-			font-size: 1.2em;
-			color: black;
-		}
-	}
-
 	.main-menu{
 		padding-top: 59%;
 		background-attachment: fixed;
@@ -242,7 +243,7 @@
 	  	background-size: 126%;
 
 	  	h1{
-	  		background-color: white;
+	  		background-color: #f6f6f6;
 	  		padding: 8.5% 9.5% 0px 5.5%;
 	  		border-radius: 43px 43px 0px 0px;
 	  		display: flex;
@@ -250,6 +251,8 @@
 
 	  		i{
 	  			font-size: 1em;
+	  			color: #2e2e2e;
+	  			font-weight: 100;
 	  		}
 	  	}
 	}
@@ -271,4 +274,66 @@
 	.sens{
 		background-image: url('../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
 	  	background-size: 123%;
+	}
+
+	form{
+		background-color: #f6f6f6;
+		padding: 8% 0px 24%;
+	}
+	
+	.menu{
+		margin: 0px 0px 10.5% 3.7%;
+	}
+
+	h2{
+		font-size: 1.09em;
+		margin: 0% 1.5% 23px;
+
+		span{
+			border-bottom: 3px $color-tertiary solid;
+			padding-bottom: 4px;
+
+		}
+	}
+
+	.choix{
+		background-color: white;
+		box-shadow: $shadow;
+		margin: 0% 3% 3.8% 0%;
+		overflow: hidden;
+		border-radius: 16px;
+		display: flex;
+
+		div{
+			width: 100%;
+			margin: 3.5% 3% 3.8%;
+
+			h3{
+				font-size: 1.18em;
+				margin-bottom: 6px;
+			}
+
+			p{
+				font-size: 1.01em;
+				display: flex;
+				justify-content: space-between;
+			}
+		}
+
+		input{
+			margin: 0px;
+			transform-origin: 100% 50%;
+        	transform: scaleX(0);
+    	}
+	}
+
+	input{
+		margin: 3% 0px 0px 25%;
+		padding: 4.2% 11.5% ;
+		color: white;
+		font-size: 1.1em;
+		background: linear-gradient( to top, $color-primary, $color-secondary);
+		border-radius: 30px;
+		border-style: none;
+		font-family: $police_roboto;
 	}
