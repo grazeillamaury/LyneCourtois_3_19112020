@@ -5,7 +5,6 @@
 }
 
 body {
-  max-width: 100%;
   font-family: "Roboto", sans-serif;
   /*background-image: url("../maquettes/Menu-a_la_francaise.png");
   background-attachment: scroll;
@@ -32,7 +31,6 @@ p {
 header {
   text-align: center;
   box-shadow: 0px 1px 4px #cecece;
-  background-color: #FFFFFF;
   padding: 6% 0px 2%;
 }
 header img {
@@ -155,10 +153,8 @@ header img {
 }
 #restaurant figure figcaption p {
   font-size: 1.15em;
-  color: #2e2e2e;
 }
 #restaurant figure figcaption i {
-  color: #2e2e2e;
   font-size: 1.6em;
   padding: 6px 12px;
   position: absolute;
@@ -218,7 +214,6 @@ footer i {
 }
 .main-menu h1 i {
   font-size: 1em;
-  color: #2e2e2e;
   font-weight: 100;
 }
 
