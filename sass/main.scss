@@ -4,32 +4,64 @@
 	$color-secondary: #ff79da;
 	$color-tertiary : #99e2d0;
 	$color-grey : #f6f6f6;
-	$accueil_titre_size: 1.6em;
-	$shadow : 4px 5px 4px #C6C5C5;
-	@mixin bouton {
+	$accueil-titre-size: (
+		mobile:1.6em,
+		desktop:1.4em
+	);
+
+	$shadow : (
+		mobile:4px 5px 4px #C6C5C5,
+		desktop:4px 5px 4px #C6C5C5
+	);
+
+	@mixin bouton-mobile {
 		color: white;
 		font-size: 1.1em;
 		background: linear-gradient( to top, $color-primary, $color-secondary);
 		border-radius: 30px;
 	}
 
+	@mixin bouton-desktop {
+		color: white;
+		font-size: 1.1em;
+		background: linear-gradient( to top, $color-primary, $color-secondary);
+		border-radius: 30px;
+	}
+
+	$breakpoints:(
+		desktop: 1025px,
+	);
+
+	@mixin desktop-only {
+	  @media screen and (min-width: map-get($breakpoints, desktop)){
+	      @content;
+	  }
+	}
+
+
 	*{
-		margin: 0px;
+		margin:0;
 	}
 
 	body{
 		font-family: $police_roboto;
-		/*background-image: url("../maquettes/Menu-a_la_francaise.png");
+		background-image: url("../maquettes/Accueil.png");
 		background-attachment: scroll;
 		background-repeat: no-repeat;
 		background-position: top center;
-		background-size: 100%;*/
+		background-size: 100%;
 		background-color: #FFFFFF;
+		@include desktop-only{
+		    background-image: url("../maquettes/menu_a_la_francaise-desktop.png");
+		}
 	}
 
 	h1{
 		font-family: 'Shrikhand', cursive;
 		font-size: 1.86em;
+		@include desktop-only{
+		    font-size: 1.5em;
+		}
 	}
 
 	a{
@@ -38,6 +70,9 @@
 
 	p{
 		font-size: 1.1em;
+		@include desktop-only{
+			font-size: 1em;
+		}
 	}
 
 
@@ -45,11 +80,17 @@
 
 	header{
 		text-align: center;
-		box-shadow: 0px 1px 4px #cecece;
-		padding: 6% 0px 2%;
+		box-shadow:0 1px 4px #cecece;
+		padding: 6% 0 2%;
+		@include desktop-only{
+			padding: 1.9% 0 0.8%;
+		}
 		
 		img{
 			width: 45%;
+			@include desktop-only{
+				width: 15%;
+			}
 		}
 	}
 
@@ -57,14 +98,23 @@
 		display: flex;
 		justify-content: space-between;
 		padding: 6% 26% 2.5% 6.5%;
+		@include desktop-only{
+			padding: 2% 48% 0.9% 19.5%;
+		}
 
 		img{
 			width: 88%;
+			@include desktop-only{
+			    width: 136%;
+			}
 		}
 
 		i{
 			font-size: 1.2em;
 			color: black;
+			@include desktop-only{
+			    font-size: 2.1em;
+			}
 		}
 	}
 
@@ -81,45 +131,45 @@
 
 /*Slogan + lien vers restaurant*/
 	.slogan{
-		padding: 10.5% 0px 19% 3%;
+		padding: 10.5%0 19% 3%;
 		text-align: center;
 		background-color: $color-grey;
 
 		h1{
 			font-family: $police_roboto;
-			font-size: $accueil_titre_size;
-			padding: 0px 21% 0px 14%;
+			font-size: map-get($accueil-titre-size, mobile);
+			padding: 0 21% 0 14%;
 		}
 
 		p{
 			font-size: 1.26em;
-			margin: 3% 0px 12% 0px;
+			margin: 3% 0 12% 0;
 		}
 
 		a{
 			padding: 4.2% 6%;
-			@include bouton;
+			@include bouton-mobile;
 		}
 	}
 
 
 /*Fonctionnement*/
 	.fonctionnement{
-		padding: 13.5% 0px 11.5% 5%;
+		padding: 13.5% 0 11.5% 5%;
 
 		h2{
-			font-size: $accueil_titre_size;
+			font-size: map-get($accueil-titre-size, mobile);
 			margin-bottom: 7%;
 		}
 
 		p{
 			padding: 8.5% 0% 6.5%;
-			margin: 0px 5% 6% 4%;
+			margin: 0 5% 6% 4%;
 			background-color: $color-grey;
 			display: flex;
 			align-items: center;
 			border-radius: 30px;
-			box-shadow: $shadow;
+			box-shadow: map-get($shadow, mobile);
 
 			span{
 				margin-left: -4%;
@@ -134,7 +184,7 @@
 			}
 
 			i{
-				margin: 0px 26px;
+				margin: 0 26px;
 			}
 		}
 	}
@@ -146,11 +196,11 @@
 
 /*Restaurants*/
 	#restaurant{
-		padding: 14.5% 0px 12.5% 5%;
+		padding: 14.5% 0 12.5% 5%;
 		background-color: $color-grey;
 
 		h2{
-			font-size: $accueil_titre_size;
+			font-size: map-get($accueil-titre-size, mobile);
 			margin-bottom: 6%;
 		}
 
@@ -164,12 +214,12 @@
 			justify-content: flex-end;
 			position: relative;
 			margin-bottom: 17px;
-			box-shadow: $shadow;
+			box-shadow: map-get($shadow, mobile);
 
 			figcaption{
 				min-height: 25%;
 				display: flex;
-				padding: 5% 4% 0px;
+				padding: 5% 4% 0;
 				justify-content: space-between;
 				position: relative;
 				background-color: white;
@@ -208,7 +258,7 @@
 
 /*Footer*/
 	footer{
-		padding: 6% 0px 6.7% 6.5%;
+		padding: 6% 0 6.7% 6.5%;
 		color: white;
 		background-color: #353535;
 
@@ -244,10 +294,11 @@
 
 	  	h1{
 	  		background-color: $color-grey;
-	  		padding: 8.5% 9.5% 0px 5.5%;
-	  		border-radius: 43px 43px 0px 0px;
+	  		padding: 8.5% 9.5% 0 5.5%;
+	  		border-radius: 43px 43px 0 0;
 	  		display: flex;
 	  		justify-content: space-between;
+	  		align-items: center;
 
 	  		i{
 	  			font-size: 1em;
@@ -277,11 +328,11 @@
 
 	form{
 		background-color: $color-grey;
-		padding: 8% 0px 24%;
+		padding: 8% 0 24%;
 	}
 	
 	.menu{
-		margin: 0px 0px 10.5% 3.7%;
+		margin: 0 0 10.5% 3.7%;
 	}
 
 	h2{
@@ -297,7 +348,7 @@
 
 	.choix{
 		background-color: white;
-		box-shadow: $shadow;
+		box-shadow: map-get($shadow, mobile);
 		margin: 0% 3% 3.8% 0%;
 		overflow: hidden;
 		border-radius: 16px;
@@ -320,16 +371,16 @@
 		}
 
 		input{
-			margin: 0px;
+			margin: 0;
 			transform-origin: 100% 50%;
         	transform: scaleX(0);
     	}
 	}
 
 	input{
-		margin: 3% 0px 0px 25%;
+		margin: 3% 0 0 25%;
 		padding: 4.2% 11.5% ;
-		@include bouton;
+		@include bouton-mobile;
 		border-style: none;
 		font-family: $police_roboto;
 	}
