@@ -6,17 +6,15 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background-image: url("../maquettes/Accueil.png");
+  background-color: #eaeaea;
+  /*background-image: url("../maquettes/Accueil.png");
   background-attachment: scroll;
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 100%;
-  background-color: #FFFFFF;
-}
-@media screen and (min-width: 1025px) {
-  body {
-    background-image: url("../maquettes/menu_a_la_francaise-desktop.png");
-  }
+  @include desktop-only{
+      background-image: url("../maquettes/accueil-desktop.png");
+  }*/
 }
 
 h1 {
@@ -38,19 +36,21 @@ p {
 }
 @media screen and (min-width: 1025px) {
   p {
-    font-size: 1em;
+    font-size: 1.64em;
   }
 }
 
 /*Header*/
 header {
   text-align: center;
+  background-color: #ffffff;
   box-shadow: 0 1px 4px #cecece;
   padding: 6% 0 2%;
 }
 @media screen and (min-width: 1025px) {
   header {
     padding: 1.9% 0 0.8%;
+    box-shadow: 0 6px 4px 24;
   }
 }
 header img {
@@ -69,7 +69,7 @@ header img {
 }
 @media screen and (min-width: 1025px) {
   .header-menu {
-    padding: 2% 48% 0.9% 19.5%;
+    padding: 2% 48% 0.8% 19.5%;
   }
 }
 .header-menu img {
@@ -94,9 +94,13 @@ header img {
 .city {
   text-align: center;
   padding: 4% 35.5% 4% 28%;
-  background-color: #eaeaea;
   display: flex;
   justify-content: space-between;
+}
+@media screen and (min-width: 1025px) {
+  .city {
+    padding: 1.4% 43.5% 1.2% 43.5%;
+  }
 }
 
 /*Slogan + lien vers restaurant*/
@@ -105,14 +109,31 @@ header img {
   text-align: center;
   background-color: #f6f6f6;
 }
+@media screen and (min-width: 1025px) {
+  .slogan {
+    padding: 4% 0 7% 0;
+  }
+}
 .slogan h1 {
   font-family: "Roboto", sans-serif;
   font-size: 1.6em;
   padding: 0 21% 0 14%;
 }
+@media screen and (min-width: 1025px) {
+  .slogan h1 {
+    padding: 0 30%;
+    font-size: 2.65em;
+  }
+}
 .slogan p {
   font-size: 1.26em;
   margin: 3% 0 12% 0;
+}
+@media screen and (min-width: 1025px) {
+  .slogan p {
+    font-size: 1.81em;
+    margin: 1.15% 31.5% 4.5%;
+  }
 }
 .slogan a {
   padding: 4.2% 6%;
@@ -120,15 +141,38 @@ header img {
   font-size: 1.1em;
   background: linear-gradient(to top, #9356dc, #ff79da);
   border-radius: 30px;
+  box-shadow: 4px 5px 4px #C6C5C5;
+}
+@media screen and (min-width: 1025px) {
+  .slogan a {
+    padding: 1.4% 2%;
+    font-size: 1.65em;
+    border-radius: 100px;
+  }
 }
 
 /*Fonctionnement*/
 .fonctionnement {
   padding: 13.5% 0 11.5% 5%;
+  background-color: #ffffff;
+}
+@media screen and (min-width: 1025px) {
+  .fonctionnement {
+    padding: 6.6% 2.7% 10% 5.7%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 .fonctionnement h2 {
   font-size: 1.6em;
-  margin-bottom: 7%;
+  margin: 0 0.5% 7%;
+}
+@media screen and (min-width: 1025px) {
+  .fonctionnement h2 {
+    font-size: 2.65em;
+    margin: 0 100% 2.7% 0;
+  }
 }
 .fonctionnement p {
   padding: 8.5% 0% 6.5%;
@@ -138,6 +182,16 @@ header img {
   align-items: center;
   border-radius: 30px;
   box-shadow: 4px 5px 4px #C6C5C5;
+}
+@media screen and (min-width: 1025px) {
+  .fonctionnement p {
+    padding: 2% 0;
+    margin: 0 0 0 1%;
+    border-radius: 50px;
+    box-shadow: 4px 5px 4px #C6C5C5;
+    font-size: 2em;
+    width: 30%;
+  }
 }
 .fonctionnement p span {
   margin-left: -4%;
@@ -150,6 +204,13 @@ header img {
   border-radius: 30px;
   color: white;
 }
+@media screen and (min-width: 1025px) {
+  .fonctionnement p span {
+    margin-left: -4%;
+    width: 60px;
+    height: 60px;
+  }
+}
 .fonctionnement p i {
   margin: 0 26px;
 }
@@ -157,15 +218,34 @@ header img {
 .fa-mobile-alt {
   font-size: 1.3em;
 }
+@media screen and (min-width: 1025px) {
+  .fa-mobile-alt {
+    font-size: 1.5em;
+  }
+}
 
 /*Restaurants*/
 #restaurant {
   padding: 14.5% 0 12.5% 5%;
-  background-color: #f6f6f6;
+  /*background-color: $color-background-secondary;*/
+}
+@media screen and (min-width: 1025px) {
+  #restaurant {
+    padding: 6% 2.5% 5.2% 2.5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 #restaurant h2 {
   font-size: 1.6em;
   margin-bottom: 6%;
+}
+@media screen and (min-width: 1025px) {
+  #restaurant h2 {
+    font-size: 2.65em;
+    margin: 0 100% 2.2% 2.8%;
+  }
 }
 #restaurant figure {
   width: 94.5%;
@@ -179,28 +259,65 @@ header img {
   margin-bottom: 17px;
   box-shadow: 4px 5px 4px #C6C5C5;
 }
+@media screen and (min-width: 1025px) {
+  #restaurant figure {
+    width: 24%;
+    height: 520px;
+    border-radius: 30px;
+    margin-bottom: 0;
+    box-shadow: 4px 5px 4px #C6C5C5;
+  }
+}
 #restaurant figure figcaption {
   min-height: 25%;
   display: flex;
   padding: 5% 4% 0;
   justify-content: space-between;
   position: relative;
-  background-color: white;
+  background-color: #ffffff;
+}
+@media screen and (min-width: 1025px) {
+  #restaurant figure figcaption {
+    min-height: 20%;
+  }
 }
 #restaurant figure figcaption h3 {
   font-size: 1.2em;
   margin-bottom: 4px;
 }
+@media screen and (min-width: 1025px) {
+  #restaurant figure figcaption h3 {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+  }
+}
 #restaurant figure figcaption p {
   font-size: 1.15em;
 }
+@media screen and (min-width: 1025px) {
+  #restaurant figure figcaption p {
+    font-size: 1.4em;
+  }
+}
 #restaurant figure figcaption i {
   font-size: 1.6em;
-  padding: 6px 12px;
   position: absolute;
-  top: 20px;
-  right: 15px;
+  top: 26px;
+  right: 26px;
   font-weight: 100;
+}
+@media screen and (min-width: 1025px) {
+  #restaurant figure figcaption i {
+    font-size: 2.25em;
+    top: 35px;
+    right: 35px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  #restaurant figure img {
+    max-height: 140%;
+    width: 140%;
+  }
 }
 
 .new {
@@ -212,6 +329,14 @@ header img {
   padding: 4px 9px;
   border-radius: 2px;
 }
+@media screen and (min-width: 1025px) {
+  .new {
+    top: 30px;
+    right: 30px;
+    padding: 6px 11px;
+    border-radius: 4px;
+  }
+}
 
 /*Footer*/
 footer {
@@ -219,31 +344,66 @@ footer {
   color: white;
   background-color: #353535;
 }
+@media screen and (min-width: 1025px) {
+  footer {
+    padding: 2.2% 48.5% 2.6% 19.5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
 footer h5 {
   font-size: 1.24em;
   margin-bottom: 19px;
   font-family: "Shrikhand", cursive;
+}
+@media screen and (min-width: 1025px) {
+  footer h5 {
+    font-size: 1.78em;
+    margin: 0 100% 29px 0;
+  }
 }
 footer p {
   color: white;
   font-size: 1.11em;
   margin-bottom: 7px;
 }
+@media screen and (min-width: 1025px) {
+  footer p {
+    font-size: 1.62em;
+    margin-bottom: 28px;
+  }
+}
 footer i {
   margin-right: 10px;
+}
+@media screen and (min-width: 1025px) {
+  footer i {
+    margin-right: 17px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  footer a:last-child {
+    padding-right: 27.3%;
+  }
 }
 
 .fa-hands-helping {
   font-size: 0.7em;
 }
+@media screen and (min-width: 1025px) {
+  .fa-hands-helping {
+    font-size: 0.9em;
+  }
+}
 
 /*pages menus*/
 .main-menu {
   padding-top: 59%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 126%;
+  /*background-attachment: fixed;
+   	background-repeat: no-repeat;
+   	background-position: top center;
+   	background-size: 126%;*/
 }
 .main-menu h1 {
   background-color: #f6f6f6;
@@ -258,25 +418,24 @@ footer i {
   font-weight: 100;
 }
 
-.palette {
-  background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+/*.palette{
+	background-image: url('../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
 }
 
-.enchantee {
-  background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
-  background-size: 100%;
-  background-position: center -38px;
+.enchantee{
+	background-image: url('../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg');
+  	background-size: 100%;
+  	background-position: center -38px;
 }
 
-.francaise {
-  background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+.francaise{
+	background-image: url('../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
 }
 
-.sens {
-  background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-  background-size: 123%;
-}
-
+.sens{
+	background-image: url('../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
+  	background-size: 123%;
+}*/
 form {
   background-color: #f6f6f6;
   padding: 8% 0 24%;
@@ -296,7 +455,7 @@ h2 span {
 }
 
 .choix {
-  background-color: white;
+  background-color: #ffffff;
   box-shadow: 4px 5px 4px #C6C5C5;
   margin: 0% 3% 3.8% 0%;
   overflow: hidden;

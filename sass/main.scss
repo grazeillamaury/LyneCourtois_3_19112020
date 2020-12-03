@@ -3,10 +3,11 @@
 	$color-primary: #9356dc;
 	$color-secondary: #ff79da;
 	$color-tertiary : #99e2d0;
-	$color-grey : #f6f6f6;
+	$color-background-primary : #ffffff;
+	$color-background-secondary : #f6f6f6;
 	$accueil-titre-size: (
 		mobile:1.6em,
-		desktop:1.4em
+		desktop:2.65em
 	);
 
 	$shadow : (
@@ -22,10 +23,8 @@
 	}
 
 	@mixin bouton-desktop {
-		color: white;
-		font-size: 1.1em;
-		background: linear-gradient( to top, $color-primary, $color-secondary);
-		border-radius: 30px;
+		font-size: 1.65em;
+		border-radius: 100px;
 	}
 
 	$breakpoints:(
@@ -45,15 +44,15 @@
 
 	body{
 		font-family: $police_roboto;
-		background-image: url("../maquettes/Accueil.png");
+		background-color: #eaeaea;
+		/*background-image: url("../maquettes/Accueil.png");
 		background-attachment: scroll;
 		background-repeat: no-repeat;
 		background-position: top center;
 		background-size: 100%;
-		background-color: #FFFFFF;
 		@include desktop-only{
-		    background-image: url("../maquettes/menu_a_la_francaise-desktop.png");
-		}
+		    background-image: url("../maquettes/accueil-desktop.png");
+		}*/
 	}
 
 	h1{
@@ -71,7 +70,7 @@
 	p{
 		font-size: 1.1em;
 		@include desktop-only{
-			font-size: 1em;
+			font-size: 1.64em;
 		}
 	}
 
@@ -80,10 +79,12 @@
 
 	header{
 		text-align: center;
+		background-color: $color-background-primary;
 		box-shadow:0 1px 4px #cecece;
 		padding: 6% 0 2%;
 		@include desktop-only{
 			padding: 1.9% 0 0.8%;
+			box-shadow: 0 6px 4px 00000024;
 		}
 		
 		img{
@@ -99,7 +100,7 @@
 		justify-content: space-between;
 		padding: 6% 26% 2.5% 6.5%;
 		@include desktop-only{
-			padding: 2% 48% 0.9% 19.5%;
+			padding: 2% 48% 0.8% 19.5%;
 		}
 
 		img{
@@ -123,32 +124,51 @@
 	.city{
 		text-align: center;
 		padding: 4% 35.5% 4% 28%;
-		background-color: #eaeaea;
 		display: flex;
 		justify-content: space-between;
+		@include desktop-only{
+			padding: 1.4% 43.5% 1.2% 43.5%;
+		}
 	}
 
 
 /*Slogan + lien vers restaurant*/
 	.slogan{
-		padding: 10.5%0 19% 3%;
+		padding: 10.5% 0 19% 3%;
 		text-align: center;
-		background-color: $color-grey;
+		background-color: $color-background-secondary;
+		@include desktop-only{
+			padding: 4% 0 7% 0;
+		}
+
 
 		h1{
 			font-family: $police_roboto;
 			font-size: map-get($accueil-titre-size, mobile);
 			padding: 0 21% 0 14%;
+			@include desktop-only{
+				padding: 0 30%;
+				font-size: map-get($accueil-titre-size, desktop);
+			}
 		}
 
 		p{
 			font-size: 1.26em;
 			margin: 3% 0 12% 0;
+			@include desktop-only{
+				font-size: 1.81em;
+				margin: 1.15% 31.5% 4.5%;
+			}
 		}
 
 		a{
 			padding: 4.2% 6%;
 			@include bouton-mobile;
+			box-shadow: map-get($shadow, mobile);
+			@include desktop-only{
+				padding: 1.4% 2%;
+				@include bouton-desktop;
+			}
 		}
 	}
 
@@ -156,20 +176,39 @@
 /*Fonctionnement*/
 	.fonctionnement{
 		padding: 13.5% 0 11.5% 5%;
+		background-color: $color-background-primary;
+		@include desktop-only{
+			padding: 6.6% 2.7% 10% 5.7%;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
 
 		h2{
 			font-size: map-get($accueil-titre-size, mobile);
-			margin-bottom: 7%;
+			margin: 0 0.5% 7%;
+			@include desktop-only{
+				font-size: map-get($accueil-titre-size, desktop);
+				margin: 0 100% 2.7% 0;
+			}
 		}
 
 		p{
 			padding: 8.5% 0% 6.5%;
 			margin: 0 5% 6% 4%;
-			background-color: $color-grey;
+			background-color: $color-background-secondary;
 			display: flex;
 			align-items: center;
 			border-radius: 30px;
 			box-shadow: map-get($shadow, mobile);
+			@include desktop-only{
+				padding: 2% 0;
+				margin: 0 0 0 1%;
+				border-radius: 50px;
+				box-shadow: map-get($shadow, desktop);
+				font-size: 2em;
+				width: 30%
+			}
 
 			span{
 				margin-left: -4%;
@@ -181,6 +220,11 @@
 				background-color: $color-primary;
 				border-radius: 30px;
 				color: white;
+				@include desktop-only{
+					margin-left: -4%;
+					width: 60px;
+					height: 60px;
+				}
 			}
 
 			i{
@@ -191,17 +235,30 @@
 
 	.fa-mobile-alt{
 		font-size: 1.3em;
+		@include desktop-only{
+			font-size: 1.5em;
+		}
 	}
 
 
 /*Restaurants*/
 	#restaurant{
 		padding: 14.5% 0 12.5% 5%;
-		background-color: $color-grey;
+		/*background-color: $color-background-secondary;*/
+		@include desktop-only{
+			padding:6% 2.5% 5.2% 2.5%;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
 
 		h2{
 			font-size: map-get($accueil-titre-size, mobile);
 			margin-bottom: 6%;
+			@include desktop-only{
+				font-size: map-get($accueil-titre-size, desktop);
+				margin: 0 100% 2.2% 2.8%;
+			}
 		}
 
 		figure{
@@ -215,6 +272,13 @@
 			position: relative;
 			margin-bottom: 17px;
 			box-shadow: map-get($shadow, mobile);
+			@include desktop-only{
+				width: 24%;
+				height: 520px;
+				border-radius: 30px;
+				margin-bottom: 0;
+				box-shadow: map-get($shadow, desktop);
+			}
 
 			figcaption{
 				min-height: 25%;
@@ -222,24 +286,45 @@
 				padding: 5% 4% 0;
 				justify-content: space-between;
 				position: relative;
-				background-color: white;
+				background-color: $color-background-primary;
+				@include desktop-only{
+					min-height: 20%;
+				}
 
 				h3{
 					font-size: 1.2em;
 					margin-bottom: 4px;
+					@include desktop-only{
+						font-size: 1.6em;
+						margin-bottom: 15px;
+					}
 				}
 
 				p{
 					font-size: 1.15em;
+					@include desktop-only{
+						font-size: 1.4em;
+					}
 				}
 
 				i{
 					font-size: 1.6em;
-					padding: 6px 12px;
 					position: absolute;
-					top: 20px;
-					right: 15px;
+					top: 26px;
+					right: 26px;
 					font-weight: 100;
+					@include desktop-only{
+						font-size: 2.25em;
+						top: 35px;
+						right: 35px;
+					}
+				}
+			}
+
+			img{
+				@include desktop-only{
+					max-height: 140%;
+					width: 140%;
 				}
 			}
 		}
@@ -253,6 +338,12 @@
 		color: #008766;
 		padding: 4px 9px;
 		border-radius: 2px;
+		@include desktop-only{
+			top: 30px;
+			right: 30px;
+			padding: 6px 11px;
+			border-radius: 4px;
+		}
 	}
 
 
@@ -261,39 +352,65 @@
 		padding: 6% 0 6.7% 6.5%;
 		color: white;
 		background-color: #353535;
+		@include desktop-only{
+			padding: 2.2% 48.5% 2.6% 19.5%;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
 
 		h5{
 			font-size: 1.24em;
 			margin-bottom: 19px;
 			font-family: 'Shrikhand', cursive;
+			@include desktop-only{
+				font-size: 1.78em;
+				margin: 0 100% 29px 0;
+			}
 		}
 
 		p{
 			color: white;
 			font-size: 1.11em;
 			margin-bottom: 7px;
+			@include desktop-only{
+				font-size: 1.62em;
+				margin-bottom: 28px;
+			}
 		}
 
 		i{
 			margin-right: 10px;
+			@include desktop-only{
+				margin-right: 17px;
+			}
+		}
+
+		a:last-child{
+			@include desktop-only{
+				padding-right: 27.3%;
+			}
 		}
 	}
 
 	.fa-hands-helping{
 		font-size: 0.7em;
+		@include desktop-only{
+			font-size: 0.9em;
+		}
 	}
 
 
 /*pages menus*/
 	.main-menu{
 		padding-top: 59%;
-		background-attachment: fixed;
+		/*background-attachment: fixed;
 	  	background-repeat: no-repeat;
 	  	background-position: top center;
-	  	background-size: 126%;
+	  	background-size: 126%;*/
 
 	  	h1{
-	  		background-color: $color-grey;
+	  		background-color: $color-background-secondary;
 	  		padding: 8.5% 9.5% 0 5.5%;
 	  		border-radius: 43px 43px 0 0;
 	  		display: flex;
@@ -307,7 +424,7 @@
 	  	}
 	}
 
-	.palette{
+	/*.palette{
 		background-image: url('../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
 	}
 
@@ -324,10 +441,10 @@
 	.sens{
 		background-image: url('../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
 	  	background-size: 123%;
-	}
+	}*/
 
 	form{
-		background-color: $color-grey;
+		background-color: $color-background-secondary;
 		padding: 8% 0 24%;
 	}
 	
@@ -347,7 +464,7 @@
 	}
 
 	.choix{
-		background-color: white;
+		background-color: $color-background-primary;
 		box-shadow: map-get($shadow, mobile);
 		margin: 0% 3% 3.8% 0%;
 		overflow: hidden;
