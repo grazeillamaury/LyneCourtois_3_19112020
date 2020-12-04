@@ -12,7 +12,7 @@
 
 	$shadow : (
 		mobile:4px 5px 4px #C6C5C5,
-		desktop:4px 5px 4px #C6C5C5
+		desktop:8px 10px 4px #C6C5C5
 	);
 
 	@mixin bouton-mobile {
@@ -28,6 +28,8 @@
 	}
 
 	$breakpoints:(
+		tablet: 600px,
+		max-deskop: 1350px,
 		desktop: 1025px,
 	);
 
@@ -36,6 +38,13 @@
 	      @content;
 	  }
 	}
+
+	@mixin max-desktop-only {
+	  @media screen and (min-width: map-get($breakpoints, max-deskop)){
+	      @content;
+	  }
+	}
+
 
 
 	*{
@@ -51,7 +60,7 @@
 		background-position: top center;
 		background-size: 100%;
 		@include desktop-only{
-		    background-image: url("../maquettes/accueil-desktop.png");
+		    background-image: url("../maquettes/menu_a_la_francaise-desktop.png");
 		}*/
 	}
 
@@ -59,7 +68,7 @@
 		font-family: 'Shrikhand', cursive;
 		font-size: 1.86em;
 		@include desktop-only{
-		    font-size: 1.5em;
+		    font-size: 2.7em;
 		}
 	}
 
@@ -80,17 +89,17 @@
 	header{
 		text-align: center;
 		background-color: $color-background-primary;
-		box-shadow:0 1px 4px #cecece;
+		box-shadow: 0 1px 4px #cecece;
 		padding: 6% 0 2%;
 		@include desktop-only{
 			padding: 1.9% 0 0.8%;
-			box-shadow: 0 6px 4px 00000024;
+			box-shadow: 0 6px 4px rgba(113, 109, 109, 0.31);
 		}
 		
 		img{
 			width: 45%;
 			@include desktop-only{
-				width: 15%;
+				width: 20%;
 			}
 		}
 	}
@@ -127,7 +136,7 @@
 		display: flex;
 		justify-content: space-between;
 		@include desktop-only{
-			padding: 1.4% 43.5% 1.2% 43.5%;
+			padding: 1.4% 42% 1.2% 42%;
 		}
 	}
 
@@ -147,7 +156,7 @@
 			font-size: map-get($accueil-titre-size, mobile);
 			padding: 0 21% 0 14%;
 			@include desktop-only{
-				padding: 0 30%;
+				padding: 0 35%;
 				font-size: map-get($accueil-titre-size, desktop);
 			}
 		}
@@ -183,6 +192,9 @@
 			justify-content: space-between;
 			flex-wrap: wrap;
 		}
+		@include max-desktop-only{
+			padding: 6.6% 2.7% 10% 5.7%;
+		}
 
 		h2{
 			font-size: map-get($accueil-titre-size, mobile);
@@ -202,12 +214,12 @@
 			border-radius: 30px;
 			box-shadow: map-get($shadow, mobile);
 			@include desktop-only{
-				padding: 2% 0;
+				padding: 1.5% 0;
 				margin: 0 0 0 1%;
 				border-radius: 50px;
 				box-shadow: map-get($shadow, desktop);
-				font-size: 2em;
-				width: 30%
+				font-size: 1.5em;
+				width: 29%
 			}
 
 			span{
@@ -222,8 +234,8 @@
 				color: white;
 				@include desktop-only{
 					margin-left: -4%;
-					width: 60px;
-					height: 60px;
+					min-width: 40px;
+					min-height: 40px;
 				}
 			}
 
@@ -244,7 +256,7 @@
 /*Restaurants*/
 	#restaurant{
 		padding: 14.5% 0 12.5% 5%;
-		/*background-color: $color-background-secondary;*/
+		background-color: $color-background-secondary;
 		@include desktop-only{
 			padding:6% 2.5% 5.2% 2.5%;
 			display: flex;
@@ -273,17 +285,21 @@
 			margin-bottom: 17px;
 			box-shadow: map-get($shadow, mobile);
 			@include desktop-only{
+				width: 30%;
+				height: 400px;
+				border-radius: 30px;
+				margin-bottom: 3%;
+				box-shadow: map-get($shadow, desktop);
+			}
+			@include max-desktop-only{
 				width: 24%;
 				height: 520px;
-				border-radius: 30px;
-				margin-bottom: 0;
-				box-shadow: map-get($shadow, desktop);
 			}
 
 			figcaption{
 				min-height: 25%;
 				display: flex;
-				padding: 5% 4% 0;
+				padding: 5% 4% 2%;
 				justify-content: space-between;
 				position: relative;
 				background-color: $color-background-primary;
@@ -323,8 +339,13 @@
 
 			img{
 				@include desktop-only{
-					max-height: 140%;
-					width: 140%;
+					max-height: 160%;
+					width: 160%;
+				}
+				@include max-desktop-only{
+					max-height: 200%;
+					width: 200%;
+					margin-left: -40%;
 				}
 			}
 		}
@@ -353,7 +374,7 @@
 		color: white;
 		background-color: #353535;
 		@include desktop-only{
-			padding: 2.2% 48.5% 2.6% 19.5%;
+			padding: 2.2% 35% 2.6% 9.5%;
 			display: flex;
 			justify-content: space-between;
 			flex-wrap: wrap;
@@ -404,10 +425,14 @@
 /*pages menus*/
 	.main-menu{
 		padding-top: 59%;
-		/*background-attachment: fixed;
+		background-attachment: fixed;
 	  	background-repeat: no-repeat;
 	  	background-position: top center;
-	  	background-size: 126%;*/
+	  	background-size: 126%;
+	  	@include desktop-only{
+			padding: 32.5% 18.7% 0 17.2%;
+		  	background-size: 100%;
+		}
 
 	  	h1{
 	  		background-color: $color-background-secondary;
@@ -416,6 +441,10 @@
 	  		display: flex;
 	  		justify-content: space-between;
 	  		align-items: center;
+	  		@include desktop-only{
+		  		padding: 4.5% 6.5% 0 6.5%;
+		  		border-radius: 100px 100px 0 0;
+			}
 
 	  		i{
 	  			font-size: 1em;
@@ -424,41 +453,69 @@
 	  	}
 	}
 
-	/*.palette{
+	.palette{
 		background-image: url('../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+		@include desktop-only{
+	  		background-position: center 80%;
+		}
 	}
 
 	.enchantee{
 		background-image: url('../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg');
 	  	background-size: 100%;
 	  	background-position: center -38px;
+	  	@include desktop-only{
+	  		background-position: center 65%;
+		}
 	}
 
 	.francaise{
 		background-image: url('../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
+		@include desktop-only{
+	  		background-position: center 50%;
+		}
 	}
 
 	.sens{
 		background-image: url('../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
 	  	background-size: 123%;
-	}*/
+	  	@include desktop-only{
+	  		background-position: center 90%;
+		}
+	}
 
 	form{
 		background-color: $color-background-secondary;
 		padding: 8% 0 24%;
+		text-align: center;
+		@include desktop-only{
+	  		padding: 3.9% 0 15%;
+		}
 	}
 	
 	.menu{
 		margin: 0 0 10.5% 3.7%;
+		text-align: left;
+		@include desktop-only{
+			margin: 0 9% 6.5% 9%;
+		}
 	}
 
 	h2{
 		font-size: 1.09em;
 		margin: 0% 1.5% 23px;
+		@include desktop-only{
+			font-size: 1.75em;
+			margin: 0% 1.7% 39px;
+		}
 
 		span{
 			border-bottom: 3px $color-tertiary solid;
 			padding-bottom: 4px;
+			@include desktop-only{
+				border-bottom: 4px $color-tertiary solid;
+				padding-bottom: 9px;;
+			}
 
 		}
 	}
@@ -470,20 +527,35 @@
 		overflow: hidden;
 		border-radius: 16px;
 		display: flex;
+		align-items: center;
+		@include desktop-only{
+			box-shadow: map-get($shadow, desktop);
+			margin: 0% 0% 18px 0%;
+		}
 
 		div{
 			width: 100%;
 			margin: 3.5% 3% 3.8%;
+			@include desktop-only{
+				margin: 2% 2% 2%;
+			}
 
 			h3{
 				font-size: 1.18em;
 				margin-bottom: 6px;
+				@include desktop-only{
+					font-size: 1.6em;
+					margin-bottom: 5px;;
+				}
 			}
 
 			p{
 				font-size: 1.01em;
 				display: flex;
 				justify-content: space-between;
+				@include desktop-only{
+					font-size: 1.36em;
+				}
 			}
 		}
 
@@ -495,9 +567,14 @@
 	}
 
 	input{
-		margin: 3% 0 0 25%;
+		margin: 3% 0 0 0;
 		padding: 4.2% 11.5% ;
 		@include bouton-mobile;
 		border-style: none;
 		font-family: $police_roboto;
+		@include desktop-only{
+			margin: 4.4% 0 0 0;
+			padding: 2% 5.5% ;
+			@include bouton-desktop;
+		}
 	}
