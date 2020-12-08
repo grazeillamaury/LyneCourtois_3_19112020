@@ -7,14 +7,6 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: #eaeaea;
-  /*background-image: url("../maquettes/Accueil.png");
-  background-attachment: scroll;
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 100%;
-  @include desktop-only{
-      background-image: url("../maquettes/menu_a_la_francaise-desktop.png");
-  }*/
 }
 
 h1 {
@@ -199,8 +191,14 @@ header img {
   color: white;
   font-size: 1.1em;
   background: linear-gradient(to top, #9356dc, #ff79da);
-  border-radius: 30px;
   box-shadow: 4px 5px 4px #C6C5C5;
+  border-radius: 30px;
+}
+.slogan a:hover {
+  background: linear-gradient(to top, #9b63df, #ff88de);
+  transition-duration: 200ms;
+  box-shadow: 9px 10px 9px #737373;
+  transition-duration: 500ms;
 }
 @media screen and (min-width: 600px) {
   .slogan a {
@@ -261,6 +259,14 @@ header img {
   align-items: center;
   border-radius: 30px;
   box-shadow: 4px 5px 4px #C6C5C5;
+}
+.fonctionnement p:hover {
+  background-color: #f5edff;
+  transition-duration: 200ms;
+}
+.fonctionnement p:hover i {
+  color: #9356dc;
+  transition-duration: 200ms;
 }
 @media screen and (min-width: 600px) {
   .fonctionnement p {
@@ -356,6 +362,10 @@ header img {
   margin-bottom: 17px;
   box-shadow: 4px 5px 4px #C6C5C5;
 }
+#restaurant figure:hover {
+  box-shadow: 9px 10px 9px #737373;
+  transition-duration: 700ms;
+}
 @media screen and (min-width: 600px) {
   #restaurant figure {
     width: 48%;
@@ -420,7 +430,12 @@ header img {
   position: absolute;
   top: 26px;
   right: 26px;
-  font-weight: 100;
+  font-weight: 500;
+}
+#restaurant figure figcaption i:hover {
+  font-weight: 501;
+  color: #9356dc;
+  transition-duration: 700ms;
 }
 @media screen and (min-width: 600px) {
   #restaurant figure figcaption i {
@@ -452,6 +467,11 @@ header img {
     max-height: 200%;
     width: 200%;
     margin-left: -40%;
+  }
+  #restaurant figure img:hover {
+    width: 203%;
+    max-height: 203%;
+    transition-duration: 700ms;
   }
 }
 
@@ -601,8 +621,13 @@ footer i {
 }
 .main-menu h1 i {
   font-size: 1em;
-  font-weight: 100;
+  font-weight: 500;
   color: #353535;
+}
+.main-menu h1 i:hover {
+  font-weight: 501;
+  color: #9356dc;
+  transition-duration: 700ms;
 }
 
 .palette {
@@ -789,10 +814,16 @@ input {
   color: white;
   font-size: 1.1em;
   background: linear-gradient(to top, #9356dc, #ff79da);
+  box-shadow: 4px 5px 4px #C6C5C5;
   border-radius: 30px;
   border-style: none;
   font-family: "Roboto", sans-serif;
-  box-shadow: 4px 5px 4px #C6C5C5;
+}
+input:hover {
+  background: linear-gradient(to top, #9b63df, #ff88de);
+  transition-duration: 200ms;
+  box-shadow: 9px 10px 9px #737373;
+  transition-duration: 500ms;
 }
 @media screen and (min-width: 600px) {
   input {
