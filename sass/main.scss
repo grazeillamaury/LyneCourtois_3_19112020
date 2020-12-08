@@ -134,7 +134,7 @@
 		justify-content: space-between;
 		padding: 6% 26% 2.5% 6.5%;
 		@include tablet-only{
-			padding: 4% 27% 2% 19%;
+			padding: 4% 28% 2% 25%;
 		}
 		@include desktop-only{
 			padding: 2% 48% 0.8% 19.5%;
@@ -551,6 +551,10 @@
 	  		display: flex;
 	  		justify-content: space-between;
 	  		align-items: center;
+	  		@include tablet-only{
+		  		padding: 4% 6% 0 6%;
+		  		border-radius: 75px 75px 0 0;
+			}
 	  		@include desktop-only{
 		  		padding: 4.5% 6.5% 0 6.5%;
 		  		border-radius: 100px 100px 0 0;
@@ -575,6 +579,9 @@
 		background-image: url('../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg');
 	  	background-size: 100%;
 	  	background-position: center -38px;
+	  	@include tablet-only{
+	  		background-position: center -200px;
+		}
 	  	@include desktop-only{
 	  		background-position: center 65%;
 		}
@@ -599,6 +606,9 @@
 		background-color: $color-background-secondary;
 		padding: 8% 0 24%;
 		text-align: center;
+		@include tablet-only{
+	  		padding: 6% 0 12%;
+		}
 		@include desktop-only{
 	  		padding: 3.9% 0 15%;
 		}
@@ -607,6 +617,9 @@
 	.menu{
 		margin: 0 0 10.5% 3.7%;
 		text-align: left;
+		@include tablet-only{
+	  		margin: 0 6% 9% 6%;
+		}
 		@include desktop-only{
 			margin: 0 9% 6.5% 9%;
 		}
@@ -614,18 +627,26 @@
 
 	h2{
 		font-size: 1.09em;
-		margin: 0% 1.5% 23px;
+		margin: 0 1.5% 23px;
+		@include tablet-only{
+	  		font-size: 1.3em;
+			margin: 0 1.6% 30px;
+		}
 		@include desktop-only{
 			font-size: 1.75em;
-			margin: 0% 1.7% 39px;
+			margin: 0 1.7% 39px;
 		}
 
 		span{
 			border-bottom: 3px $color-tertiary solid;
 			padding-bottom: 4px;
+			@include tablet-only{
+		  		border-bottom: 3px $color-tertiary solid;
+				padding-bottom: 6.5px;
+			}
 			@include desktop-only{
 				border-bottom: 4px $color-tertiary solid;
-				padding-bottom: 9px;;
+				padding-bottom: 9px;
 			}
 
 		}
@@ -639,24 +660,33 @@
 		border-radius: 16px;
 		display: flex;
 		align-items: center;
+		@include tablet-only{
+	  		box-shadow: map-get($shadow, tablet);
+			margin: 0% 0% 18px 0%;
+		}
 		@include desktop-only{
 			box-shadow: map-get($shadow, desktop);
-			margin: 0% 0% 18px 0%;
 		}
 
 		div{
 			width: 100%;
 			margin: 3.5% 3% 3.8%;
+			@include tablet-only{
+		  		margin: 2.5% 2%;
+			}
 			@include desktop-only{
-				margin: 2% 2% 2%;
+				margin: 2%;
 			}
 
 			h3{
 				font-size: 1.18em;
 				margin-bottom: 6px;
+				@include tablet-only{
+			  		font-size: 1.3em;
+				}
 				@include desktop-only{
 					font-size: 1.6em;
-					margin-bottom: 5px;;
+					margin-bottom: 5px;
 				}
 			}
 
@@ -664,6 +694,9 @@
 				font-size: 1.01em;
 				display: flex;
 				justify-content: space-between;
+				@include tablet-only{
+			  		font-size: 1.1em;
+				}
 				@include desktop-only{
 					font-size: 1.36em;
 				}
@@ -684,6 +717,11 @@
 		border-style: none;
 		font-family: $police_roboto;
 		box-shadow: map-get($shadow, mobile);
+		@include tablet-only{
+			padding: 3.5% 9.5% ;
+			@include bouton-tablet;
+			box-shadow: map-get($shadow, tablet);
+		}
 		@include desktop-only{
 			margin: 4.4% 0 0 0;
 			padding: 2% 5.5% ;
