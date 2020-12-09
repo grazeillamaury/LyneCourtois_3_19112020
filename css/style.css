@@ -188,17 +188,30 @@ header img {
 }
 .slogan a {
   padding: 4.2% 6%;
+  position: relative;
+  z-index: 1;
   color: white;
   font-size: 1.1em;
   background: linear-gradient(to top, #9356dc, #ff79da);
   box-shadow: 4px 5px 4px #C6C5C5;
   border-radius: 30px;
 }
-.slogan a:hover {
+.slogan a:hover::after {
+  opacity: 1;
+}
+.slogan a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background: linear-gradient(to top, #9b63df, #ff88de);
-  transition-duration: 200ms;
+  opacity: 0;
   box-shadow: 9px 10px 9px #737373;
-  transition-duration: 500ms;
+  z-index: -1;
+  transition: opacity 500ms, box-shadow 300ms;
+  border-radius: 10rem;
 }
 @media screen and (min-width: 600px) {
   .slogan a {
@@ -254,19 +267,19 @@ header img {
 .fonctionnement p {
   padding: 8.5% 0% 6.5%;
   margin: 0 5% 6% 4%;
-  background-color: #f6f6f6;
+  background: #f6f6f6;
   display: flex;
   align-items: center;
   border-radius: 30px;
   box-shadow: 4px 5px 4px #C6C5C5;
+  transition: background 300ms;
 }
 .fonctionnement p:hover {
-  background-color: #f5edff;
-  transition-duration: 200ms;
+  background: #f5edff;
 }
 .fonctionnement p:hover i {
   color: #9356dc;
-  transition-duration: 200ms;
+  transition: color 200ms;
 }
 @media screen and (min-width: 600px) {
   .fonctionnement p {
@@ -361,10 +374,10 @@ header img {
   position: relative;
   margin-bottom: 17px;
   box-shadow: 4px 5px 4px #C6C5C5;
+  transition: box-shadow 700ms;
 }
 #restaurant figure:hover {
-  box-shadow: 9px 10px 9px #737373;
-  transition-duration: 700ms;
+  box-shadow: 8px 10px 9px #737373;
 }
 @media screen and (min-width: 600px) {
   #restaurant figure {
@@ -451,26 +464,37 @@ header img {
     right: 35px;
   }
 }
+#restaurant figure img {
+  width: 100%;
+  max-height: 260%;
+  transition: width 700ms;
+}
+#restaurant figure img:hover {
+  width: 103%;
+}
 @media screen and (min-width: 600px) {
   #restaurant figure img {
-    max-height: 160%;
     width: 130%;
+  }
+  #restaurant figure img:hover {
+    width: 133%;
   }
 }
 @media screen and (min-width: 1025px) {
   #restaurant figure img {
     width: 160%;
   }
+  #restaurant figure img:hover {
+    width: 163%;
+  }
 }
 @media screen and (min-width: 1350px) {
   #restaurant figure img {
-    max-height: 200%;
     width: 200%;
     margin-left: -40%;
   }
   #restaurant figure img:hover {
     width: 203%;
-    max-height: 203%;
     transition-duration: 700ms;
   }
 }
@@ -633,8 +657,9 @@ footer i {
 .palette {
   background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1350px) {
   .palette {
+    background-size: 100%;
     background-position: center 80%;
   }
 }
@@ -659,6 +684,11 @@ footer i {
   background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
 }
 @media screen and (min-width: 1025px) {
+  .francaise {
+    background-size: 150%;
+  }
+}
+@media screen and (min-width: 1350px) {
   .francaise {
     background-position: center 50%;
   }
@@ -811,6 +841,8 @@ h2 span {
 input {
   margin: 3% 0 0 0;
   padding: 4.2% 11.5%;
+  position: relative;
+  z-index: 1;
   color: white;
   font-size: 1.1em;
   background: linear-gradient(to top, #9356dc, #ff79da);
@@ -819,11 +851,22 @@ input {
   border-style: none;
   font-family: "Roboto", sans-serif;
 }
-input:hover {
+input:hover::after {
+  opacity: 1;
+}
+input::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background: linear-gradient(to top, #9b63df, #ff88de);
-  transition-duration: 200ms;
+  opacity: 0;
   box-shadow: 9px 10px 9px #737373;
-  transition-duration: 500ms;
+  z-index: -1;
+  transition: opacity 500ms, box-shadow 300ms;
+  border-radius: 10rem;
 }
 @media screen and (min-width: 600px) {
   input {

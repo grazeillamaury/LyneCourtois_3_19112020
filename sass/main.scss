@@ -15,23 +15,38 @@
 		mobile:4px 5px 4px #C6C5C5,
 		tablet:6px 7px 4px #C6C5C5,
 		desktop:8px 10px 4px #C6C5C5,
-		hover: 9px 10px 9px #737373,
+		hover: 8px 10px 9px #737373,
 	);
 
 	@mixin bouton-mobile {
+		position: relative;
+    	z-index: 1;
 		color: white;
 		font-size: 1.1em;
 		background: linear-gradient( to top, $color-primary, $color-secondary);
 		box-shadow: map-get($shadow, mobile);
 		border-radius: 30px;
 		&:hover{
+			&::after {
+		        opacity: 1;
+		    }
+		}
+		&::after {
 			$color-primary-hover: lighten($color-primary, 3%);
 			$color-secondary-hover: lighten($color-secondary, 3%);
-			background: linear-gradient( to top, $color-primary-hover, $color-secondary-hover);
-			transition-duration: 200ms;
-			box-shadow: map-get($shadow, hover);
-			transition-duration: 500ms;
-		}
+	        content: "";
+	        position: absolute;
+	        top: 0;
+	        right: 0;
+	        bottom: 0;
+	        left: 0;
+	        background: linear-gradient( to top, $color-primary-hover, $color-secondary-hover);
+	        opacity: 0;
+	        box-shadow: 9px 10px 9px #737373;
+	        z-index: -1;
+	        transition: opacity 500ms, box-shadow 300ms;
+	        border-radius: 10rem;
+	    }
 	}
 
 	@mixin bouton-tablet {
@@ -273,19 +288,20 @@
 		p{
 			padding: 8.5% 0% 6.5%;
 			margin: 0 5% 6% 4%;
-			background-color: $color-background-secondary;
+			background: $color-background-secondary;
 			display: flex;
 			align-items: center;
 			border-radius: 30px;
 			box-shadow: map-get($shadow, mobile);
+			transition: background 300ms;
 			&:hover{
-				background-color: #f5edff;
-				transition-duration: 200ms;
+				background: #f5edff;
 				i{
 					color: $color-primary;
-					transition-duration: 200ms;
+					transition: color 200ms;
 				}
 			}
+
 			@include tablet-only{
 				padding: 4% 0;
 				box-shadow: map-get($shadow, tablet);
@@ -369,9 +385,9 @@
 			position: relative;
 			margin-bottom: 17px;
 			box-shadow: map-get($shadow, mobile);
+			transition: box-shadow 700ms;
 			&:hover {
 				box-shadow: map-get($shadow, hover);
-				transition-duration: 700ms;
 			}
 			@include tablet-only{
 				width: 48%;
@@ -444,20 +460,29 @@
 			}
 
 			img{
+				width: 100%;
+				max-height: 260%;
+				transition: width 700ms;
+				&:hover {
+					width: 103%;
+				}
 				@include tablet-only{
-					max-height: 160%;
 					width: 130%;
+					&:hover {
+						width: 133%;
+					}
 				}
 				@include desktop-only{
 					width: 160%;
+					&:hover {
+						width: 163%;
+					}
 				}
 				@include max-desktop-only{
-					max-height: 200%;
 					width: 200%;
 					margin-left: -40%;
 					&:hover {
 						width: 203%;
-						max-height: 203%;
 						transition-duration: 700ms;
 					}
 				}
@@ -598,7 +623,8 @@
 
 	.palette{
 		background-image: url('../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
-		@include desktop-only{
+		@include max-desktop-only{
+			background-size: 100%;
 	  		background-position: center 80%;
 		}
 	}
@@ -618,6 +644,9 @@
 	.francaise{
 		background-image: url('../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
 		@include desktop-only{
+			background-size: 150%;
+		}
+		@include max-desktop-only{
 	  		background-position: center 50%;
 		}
 	}
