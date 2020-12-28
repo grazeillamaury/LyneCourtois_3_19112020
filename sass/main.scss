@@ -45,6 +45,17 @@
 	    }
 	}
 
+	@keyframes apparition-progressive{
+		0%{
+			opacity: 0;
+			transform: translateY(5vh);
+		}
+
+		100%{
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
 
 	@mixin loader($position, $color){
 		position: $position;
@@ -121,13 +132,22 @@
 	@mixin icon {
 		font-weight: 500;
 		color: #353535;
-		transition: color 200ms, font-weight 100ms;
 		&:hover{
+			transition: color 200ms, font-weight 50ms;
 			font-weight: 600;
-			color: $color-primary;
+			background: -webkit-linear-gradient(top, $color-primary 30%, $color-secondary 70%);
+    		background-clip: text;
+   			-webkit-background-clip: text;
+    		color: transparent;
 		}
 	}
 
+	@mixin apparition-progressive ($delais) {
+		opacity: 1;
+		transform: translateY(0);
+		animation: apparition-progressive 900ms $delais;
+		animation-fill-mode: both;
+	}
 
 /*Style général*/
 	*{
@@ -633,6 +653,10 @@
 			color: white;
 			font-size: 1.11em;
 			margin-bottom: 7px;
+			&:hover{
+				color: $color-tertiary;
+				transition-duration: 200ms;
+			}
 			@include tablet-only{
 				font-size: 1.2em;
 				margin-bottom: 15px;
@@ -802,6 +826,36 @@
 		border-radius: 16px;
 		display: flex;
 		align-items: center;
+		&_un{
+		 	@include apparition-progressive (500ms);
+		}
+		&_deux{
+		 	@include apparition-progressive (900ms);
+		}
+		&_trois{
+		 	@include apparition-progressive (1300ms);
+		}
+		&_quatre{
+		 	@include apparition-progressive (1700ms);
+		}
+		&_cinq{
+		 	@include apparition-progressive (2100ms);
+		}
+		&_six{
+		 	@include apparition-progressive (2500ms);
+		}
+		&_sept{
+		 	@include apparition-progressive (2900ms);
+		}
+		&_huit{
+		 	@include apparition-progressive (3300ms);
+		}
+		&_neuf{
+		 	@include apparition-progressive (3700ms);
+		}
+		&_dix{
+		 	@include apparition-progressive (3950ms);
+		}
 		@include tablet-only{
 	  		box-shadow: map-get($shadow, tablet);
 			margin: 0% 0% 18px 0%;
