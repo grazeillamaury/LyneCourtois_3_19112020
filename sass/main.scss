@@ -409,7 +409,6 @@
 				background: #f5edff;
 				i{
 					color: $color-primary;
-					transition: color 200ms;
 				}
 			}
 
@@ -449,6 +448,7 @@
 			i{
 				margin: 0 26px;
 				color: #7e7e7e;
+				transition: color 400ms;
 			}
 		}
 	}
@@ -820,11 +820,13 @@
 
 	.choix{
 		background-color: $color-background-primary;
+		position: relative;
+		display: flex;
+		cursor: pointer;
 		box-shadow: map-get($shadow, mobile);
 		margin: 0% 3% 3.8% 0%;
 		overflow: hidden;
 		border-radius: 16px;
-		display: flex;
 		align-items: center;
 		&_un{
 		 	@include apparition-progressive (500ms);
@@ -863,10 +865,23 @@
 		@include desktop-only{
 			box-shadow: map-get($shadow, desktop);
 		}
+		&:hover{
+			div{
+				width: 75%;
+			}
+
+			.checkbox-style{
+				transform: translateX(0);
+				&::after{
+					transform: rotate(-720deg);
+				}
+			}
+		}
 
 		div{
 			width: 100%;
 			margin: 3.5% 3% 3.8%;
+			transition: width 800ms;
 			@include tablet-only{
 		  		margin: 2.5% 2%;
 			}
@@ -888,6 +903,10 @@
 
 			p{
 				font-size: 1.01em;
+				max-width: 200px;
+				overflow: hidden;
+				white-space:nowrap;
+				text-overflow: ellipsis;
 				display: flex;
 				justify-content: space-between;
 				@include tablet-only{
@@ -900,10 +919,30 @@
 		}
 
 		input{
-			margin: 0;
-			transform-origin: 100% 50%;
-        	transform: scaleX(0);
+			visibility: hidden;
     	}
+	}
+
+	.checkbox-style{
+		position: absolute;
+		display: flex;
+		top: 0;
+		right:0;
+		align-items: center;
+		justify-content: center;
+        height: 100%;
+        width: 66px;
+        transform-origin: 100% 50%;
+        transform: translateX(12vh);
+        transition: transform 800ms;
+        background-color: $color-tertiary;
+        &:after {
+	      font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f058";
+	      font-size: 1.4em;
+	      color: white;
+	      transform: rotate(0deg);
+	      transition: transform 600ms 100ms;
+	    }
 	}
 
 	button{

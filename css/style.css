@@ -372,7 +372,6 @@ header img {
 }
 .fonctionnement p:hover i {
   color: #9356dc;
-  transition: color 200ms;
 }
 @media screen and (min-width: 600px) {
   .fonctionnement p {
@@ -416,6 +415,7 @@ header img {
 .fonctionnement p i {
   margin: 0 26px;
   color: #7e7e7e;
+  transition: color 400ms;
 }
 
 .fa-mobile-alt {
@@ -875,11 +875,13 @@ h2 span {
 
 .choix {
   background-color: #ffffff;
+  position: relative;
+  display: flex;
+  cursor: pointer;
   box-shadow: 4px 5px 4px #C6C5C5;
   margin: 0% 3% 3.8% 0%;
   overflow: hidden;
   border-radius: 16px;
-  display: flex;
   align-items: center;
 }
 .choix_un {
@@ -953,9 +955,19 @@ h2 span {
     box-shadow: 8px 10px 4px #C6C5C5;
   }
 }
+.choix:hover div {
+  width: 75%;
+}
+.choix:hover .checkbox-style {
+  transform: translateX(0);
+}
+.choix:hover .checkbox-style::after {
+  transform: rotate(-720deg);
+}
 .choix div {
   width: 100%;
   margin: 3.5% 3% 3.8%;
+  transition: width 800ms;
 }
 @media screen and (min-width: 600px) {
   .choix div {
@@ -984,6 +996,10 @@ h2 span {
 }
 .choix div p {
   font-size: 1.01em;
+  max-width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   display: flex;
   justify-content: space-between;
 }
@@ -998,9 +1014,31 @@ h2 span {
   }
 }
 .choix input {
-  margin: 0;
+  visibility: hidden;
+}
+
+.checkbox-style {
+  position: absolute;
+  display: flex;
+  top: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 66px;
   transform-origin: 100% 50%;
-  transform: scaleX(0);
+  transform: translateX(12vh);
+  transition: transform 800ms;
+  background-color: #99e2d0;
+}
+.checkbox-style:after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+  font-size: 1.4em;
+  color: white;
+  transform: rotate(0deg);
+  transition: transform 600ms 100ms;
 }
 
 button {
