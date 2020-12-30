@@ -866,7 +866,7 @@
 			box-shadow: map-get($shadow, desktop);
 		}
 		&:hover{
-			div{
+			.choix-text{
 				width: 75%;
 			}
 
@@ -878,49 +878,51 @@
 			}
 		}
 
-		div{
-			width: 100%;
-			margin: 3.5% 3% 3.8%;
-			transition: width 800ms;
-			@include tablet-only{
-		  		margin: 2.5% 2%;
-			}
-			@include desktop-only{
-				margin: 2%;
-			}
-
-			h3{
-				font-size: 1.18em;
-				margin-bottom: 6px;
-				@include tablet-only{
-			  		font-size: 1.3em;
-				}
-				@include desktop-only{
-					font-size: 1.6em;
-					margin-bottom: 5px;
-				}
-			}
-
-			p{
-				font-size: 1.01em;
-				max-width: 200px;
-				overflow: hidden;
-				white-space:nowrap;
-				text-overflow: ellipsis;
-				display: flex;
-				justify-content: space-between;
-				@include tablet-only{
-			  		font-size: 1.1em;
-				}
-				@include desktop-only{
-					font-size: 1.36em;
-				}
-			}
-		}
-
 		input{
 			visibility: hidden;
     	}
+	}
+
+	.choix-text{
+		width: 90%;
+		margin: 3.5% 3% 3.8%;
+		transition: width 800ms;
+		@include tablet-only{
+	  		margin: 2.5% 2%;
+		}
+		@include desktop-only{
+			margin: 2%;
+		}
+
+		h3{
+			font-size: 1.18em;
+			margin-bottom: 6px;
+			@include tablet-only{
+		  		font-size: 1.3em;
+			}
+			@include desktop-only{
+				font-size: 1.6em;
+				margin-bottom: 5px;
+			}
+		}
+
+		p{
+			font-size: 1.01em;
+			width: 100%;
+			overflow: hidden;
+			white-space:nowrap;
+			text-overflow: ellipsis;
+			display: block;
+			@include tablet-only{
+		  		font-size: 1.1em;
+			}
+			@include desktop-only{
+				font-size: 1.36em;
+			}
+		}
+		.flex-choix{
+			display: flex;
+		}
 	}
 
 	.checkbox-style{
@@ -932,7 +934,6 @@
 		justify-content: center;
         height: 100%;
         width: 66px;
-        transform-origin: 100% 50%;
         transform: translateX(12vh);
         transition: transform 800ms;
         background-color: $color-tertiary;
