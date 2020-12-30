@@ -858,13 +858,6 @@
 		&_dix{
 		 	@include apparition-progressive (3950ms);
 		}
-		@include tablet-only{
-	  		box-shadow: map-get($shadow, tablet);
-			margin: 0% 0% 18px 0%;
-		}
-		@include desktop-only{
-			box-shadow: map-get($shadow, desktop);
-		}
 		&:hover{
 			.choix-text{
 				width: 75%;
@@ -877,6 +870,18 @@
 				}
 			}
 		}
+		@include tablet-only{
+	  		box-shadow: map-get($shadow, tablet);
+			margin: 0% 0% 18px 0%;
+			&:hover{
+				.choix-text{
+					width: 80%;
+				}
+			}
+		}
+		@include desktop-only{
+			box-shadow: map-get($shadow, desktop);
+		}
 
 		input{
 			visibility: hidden;
@@ -888,6 +893,7 @@
 		margin: 3.5% 3% 3.8%;
 		transition: width 800ms;
 		@include tablet-only{
+			width: 97%;
 	  		margin: 2.5% 2%;
 		}
 		@include desktop-only{
@@ -944,6 +950,24 @@
 	      transform: rotate(0deg);
 	      transition: transform 600ms 100ms;
 	    }
+	    @include tablet-only{
+	    	transform: translateX(14vh);
+        	width: 88px;
+			&:after {
+		      font-size: 1.6em;
+		    }
+		}
+		@include desktop-only{
+			transform: translateX(13vh);
+        	width: 77px;
+        	&:after {
+		      font-size: 1.5em;
+		    }
+		}
+		@include max-desktop-only{
+			transform: translateX(17vh);
+        	width: 88px;
+		}
 	}
 
 	button{

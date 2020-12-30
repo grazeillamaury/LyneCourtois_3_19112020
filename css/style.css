@@ -944,17 +944,6 @@ h2 span {
   animation: apparition-progressive 900ms 3950ms;
   animation-fill-mode: both;
 }
-@media screen and (min-width: 600px) {
-  .choix {
-    box-shadow: 6px 7px 4px #C6C5C5;
-    margin: 0% 0% 18px 0%;
-  }
-}
-@media screen and (min-width: 1025px) {
-  .choix {
-    box-shadow: 8px 10px 4px #C6C5C5;
-  }
-}
 .choix:hover .choix-text {
   width: 75%;
 }
@@ -963,6 +952,20 @@ h2 span {
 }
 .choix:hover .checkbox-style::after {
   transform: rotate(-720deg);
+}
+@media screen and (min-width: 600px) {
+  .choix {
+    box-shadow: 6px 7px 4px #C6C5C5;
+    margin: 0% 0% 18px 0%;
+  }
+  .choix:hover .choix-text {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .choix {
+    box-shadow: 8px 10px 4px #C6C5C5;
+  }
 }
 .choix input {
   visibility: hidden;
@@ -975,6 +978,7 @@ h2 span {
 }
 @media screen and (min-width: 600px) {
   .choix-text {
+    width: 97%;
     margin: 2.5% 2%;
   }
 }
@@ -1041,6 +1045,30 @@ h2 span {
   color: white;
   transform: rotate(0deg);
   transition: transform 600ms 100ms;
+}
+@media screen and (min-width: 600px) {
+  .checkbox-style {
+    transform: translateX(14vh);
+    width: 88px;
+  }
+  .checkbox-style:after {
+    font-size: 1.6em;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .checkbox-style {
+    transform: translateX(13vh);
+    width: 77px;
+  }
+  .checkbox-style:after {
+    font-size: 1.5em;
+  }
+}
+@media screen and (min-width: 1350px) {
+  .checkbox-style {
+    transform: translateX(17vh);
+    width: 88px;
+  }
 }
 
 button {
