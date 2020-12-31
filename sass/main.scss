@@ -8,7 +8,7 @@
 	$accueil-titre-size: (
 		mobile:1.6em,
 		tablet: 1.9em,
-		desktop:2.65em
+		desktop:2em
 	);
 
 	$shadow : (
@@ -16,6 +16,12 @@
 		tablet:6px 7px 4px #C6C5C5,
 		desktop:8px 10px 4px #C6C5C5,
 		hover: 8px 10px 9px #737373,
+	);
+
+	$breakpoints:(
+		tablet: 600px,
+		max-deskop: 1350px,
+		desktop: 1025px,
 	);
 
 	@keyframes spin {
@@ -96,20 +102,13 @@
 	}
 
 	@mixin bouton-tablet {
-		font-size: 1.1em;
 		border-radius: 50px;
 	}
 
 	@mixin bouton-desktop {
-		font-size: 1.65em;
+		font-size: 1.2em;
 		border-radius: 100px;
 	}
-
-	$breakpoints:(
-		tablet: 600px,
-		max-deskop: 1350px,
-		desktop: 1025px,
-	);
 
 	@mixin tablet-only {
 	  @media screen and (min-width: map-get($breakpoints, tablet)){
@@ -172,7 +171,7 @@
 		    font-size: 1.9em;
 		}
 		@include desktop-only{
-		    font-size: 2.7em;
+		    font-size: 2.2em;
 		}
 	}
 
@@ -183,7 +182,7 @@
 	p{
 		font-size: 1.1em;
 		@include desktop-only{
-			font-size: 1.64em;
+			font-size: 1.2em;
 		}
 	}
 
@@ -243,7 +242,10 @@
 			box-shadow: 0 6px 4px rgba(113, 109, 109, 0.31);
 		}
 		@include desktop-only{
-			padding: 1.9% 0 0.8%;
+			padding: 2% 0 1%;
+		}
+		@include max-desktop-only{
+			padding: 1.2% 0 0.5%;
 		}
 		
 		img{
@@ -254,6 +256,9 @@
 			@include desktop-only{
 				width: 20%;
 			}
+			@include max-desktop-only{
+				width: 13%;
+			}
 		}
 	}
 
@@ -263,10 +268,10 @@
 		padding: 6% 26% 2.5% 6.5%;
 		opacity: 1;
 		@include tablet-only{
-			padding: 4% 28% 2%;
+			padding: 4% 34% 2% 17%;
 		}
 		@include desktop-only{
-			padding: 2% 48% 0.8% 19.5%;
+			padding: 2% 44% 1.5% 19.5%;
 		}
 
 		img{
@@ -275,7 +280,7 @@
 				width: 100%;
 			}
 			@include desktop-only{
-			    width: 136%;
+			    width: 120%;
 			}
 		}
 
@@ -286,7 +291,7 @@
 				font-size: 1.5em;
 			}
 			@include desktop-only{
-			    font-size: 2.1em;
+			    font-size: 1.8em;
 			}
 		}
 	}
@@ -304,6 +309,9 @@
 		}
 		@include desktop-only{
 			padding: 1.4% 42% 1.2% 42%;
+		}
+		@include max-desktop-only{
+			padding: 1.4% 44% 1.2%;
 		}
 	}
 
@@ -330,7 +338,7 @@
 				font-size: map-get($accueil-titre-size, tablet);
 			}
 			@include desktop-only{
-				padding: 0 35%;
+				padding: 0 34%;
 				font-size: map-get($accueil-titre-size, desktop);
 			}
 		}
@@ -341,24 +349,24 @@
 			color: #353535;
 			@include tablet-only{
 				font-size: 1.2em;
-				margin: 4% 18% 9%;
+				margin: 4% 18% 7%;
 			}
 			@include desktop-only{
-				font-size: 1.81em;
-				margin: 1.15% 31.5% 4.5%;
+				font-size: 1.4em;
+				margin: 2% 37.5% 4.5%;
 			}
 		}
 
 		a{
-			padding: 4.2% 6%;
+			padding: 18px 24px;
 			@include bouton-mobile;
 			@include tablet-only{
-				padding: 2% 3%;
+				padding: 22px 32px;
 				@include bouton-tablet;
 				box-shadow: map-get($shadow, tablet);
 			}
 			@include desktop-only{
-				padding: 1.4% 2%;
+				padding: 21px 33px;
 				@include bouton-desktop;
 				box-shadow: map-get($shadow, desktop);
 			}
@@ -374,13 +382,13 @@
 			padding: 8% 0% 9% 5%;
 		}
 		@include desktop-only{
-			padding: 6.6% 2.7% 10% 5.7%;
+			padding: 5% 2.7% 6% 5.7%;
 			display: flex;
 			justify-content: space-between;
 			flex-wrap: wrap;
 		}
 		@include max-desktop-only{
-			padding: 6.6% 2.7% 10% 5.7%;
+			padding: 5% 14% 6% 5.7%;
 		}
 
 		h2{
@@ -392,7 +400,7 @@
 			}
 			@include desktop-only{
 				font-size: map-get($accueil-titre-size, desktop);
-				margin: 0 100% 2.7% 0;
+				margin: 0 100% 3% 0;
 			}
 		}
 
@@ -417,12 +425,17 @@
 				box-shadow: map-get($shadow, tablet);
 			}
 			@include desktop-only{
-				padding: 2% 0;
+				padding: 1.5% 0;
 				margin: 0 0 0 1%;
 				border-radius: 50px;
 				box-shadow: map-get($shadow, desktop);
-				font-size: 1.5em;
-				width: 29%
+				font-size: 1.2em;
+				width: 31%;
+			}
+			@include max-desktop-only{
+				margin: 0 0 0 8%;
+				width: 25%;
+				font-size: 1.25em;
 			}
 
 			span{
@@ -440,8 +453,8 @@
 					min-height: 32px;
 				}
 				@include desktop-only{
-					min-width: 40px;
-					min-height: 40px;
+					min-width: 35px;
+					min-height: 35px;
 				}
 			}
 
@@ -469,7 +482,7 @@
 			padding: 8% 5% 9%;
 		}
 		@include desktop-only{
-			padding:6% 2.5% 5.2% 2.5%;
+			padding: 5% 6% 3%;
 		}
 
 		h2{
@@ -477,11 +490,11 @@
 			margin-bottom: 6%;
 			@include tablet-only{
 				font-size: map-get($accueil-titre-size, tablet);
-				margin: 0 100% 5% 0%;
+				margin: 0 100% 5% 0;
 			}
 			@include desktop-only{
 				font-size: map-get($accueil-titre-size, desktop);
-				margin: 0 100% 2.2% 2.8%;
+				margin: 0 100% 3% 0;
 			}
 		}
 
@@ -510,12 +523,12 @@
 			}
 			@include desktop-only{
 				width: 30%;
-				height: 400px;
+				height: 375px;
 				box-shadow: map-get($shadow, desktop);
 			}
 			@include max-desktop-only{
-				width: 24%;
-				height: 520px;
+				width: 23%;
+				height: 450px;
 			}
 
 			figcaption{
@@ -529,6 +542,10 @@
 					min-height: 20%;
 					padding: 4% 7% 4%;
 				}
+				@include desktop-only{
+					min-height: 17%;
+					padding: 4% 7% 4%;
+				}
 
 				h3{
 					font-size: 1.2em;
@@ -538,8 +555,8 @@
 						margin-bottom: 6px;
 					}
 					@include desktop-only{
-						font-size: 1.6em;
-						margin-bottom: 15px;
+						font-size: 1.3em;
+						margin-bottom: 11px;
 					}
 				}
 
@@ -549,7 +566,7 @@
 						font-size: 1em;
 					}
 					@include desktop-only{
-						font-size: 1.4em;
+						font-size: 1em;
 					}
 				}
 
@@ -565,9 +582,9 @@
 						right: 30px;
 					}
 					@include desktop-only{
-						font-size: 2.25em;
-						top: 35px;
-						right: 35px;
+						font-size: 2.1em;
+						top: 32px;
+						right: 32px;
 					}
 				}
 			}
@@ -636,7 +653,7 @@
 			flex-wrap: wrap;
 		}
 		@include desktop-only{
-			padding: 2.2% 35% 2.6% 9.5%;
+			padding: 3% 58% 1% 9.5%;
 		}
 
 		h5{
@@ -648,7 +665,7 @@
 				margin: 0 100% 20px 0;
 			}
 			@include desktop-only{
-				font-size: 1.78em;
+				font-size: 1.6em;
 				margin: 0 100% 29px 0;
 			}
 		}
@@ -666,7 +683,7 @@
 				margin-bottom: 17px;
 			}
 			@include desktop-only{
-				font-size: 1.62em;
+				font-size: 1.2em;
 				margin-bottom: 28px;
 			}
 		}
@@ -723,7 +740,7 @@
 		  		border-radius: 75px 75px 0 0;
 			}
 	  		@include desktop-only{
-		  		padding: 4.5% 6.5% 0 6.5%;
+		  		padding: 6% 8% 0;
 		  		border-radius: 100px 100px 0 0;
 			}
 
@@ -736,8 +753,8 @@
 
 	.palette{
 		background-image: url('../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+		background-size: cover;
 		@include max-desktop-only{
-			background-size: 100%;
 	  		background-position: center 80%;
 		}
 	}
@@ -760,6 +777,7 @@
 			background-size: 150%;
 		}
 		@include max-desktop-only{
+			background-size: cover;
 	  		background-position: center 50%;
 		}
 	}
@@ -768,6 +786,7 @@
 		background-image: url('../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
 	  	background-size: 123%;
 	  	@include desktop-only{
+	  		background-size: cover;
 	  		background-position: center 90%;
 		}
 	}
@@ -780,7 +799,7 @@
 	  		padding: 6% 0 12%;
 		}
 		@include desktop-only{
-	  		padding: 3.9% 0 15%;
+	  		padding: 4% 0 12%;
 		}
 	}
 	
@@ -788,10 +807,10 @@
 		margin: 0 0 10.5% 3.7%;
 		text-align: left;
 		@include tablet-only{
-	  		margin: 0 6% 10%;
+	  		margin: 0 6% 8%;
 		}
 		@include desktop-only{
-			margin: 0 9% 6.5% 9%;
+			margin: 0 9% 7%;
 		}
 	}
 
@@ -803,7 +822,7 @@
 			margin: 0 1.6% 30px;
 		}
 		@include desktop-only{
-			font-size: 1.75em;
+			font-size: 1.3em;
 			margin: 0 1.7% 39px;
 		}
 
@@ -910,7 +929,7 @@
 		  		font-size: 1.2em;
 			}
 			@include desktop-only{
-				font-size: 1.6em;
+				font-size: 1.2em;
 				margin-bottom: 5px;
 			}
 		}
@@ -926,10 +945,7 @@
 		p, span{
 			font-size: 1.01em;
 			@include tablet-only{
-		  		font-size: 1em;
-			}
-			@include desktop-only{
-				font-size: 1.36em;
+		  		font-size: 0.9em;
 			}
 		}
 
@@ -979,19 +995,18 @@
 
 	button{
 		margin: 3% 0 0 0;
-		padding: 4.2% 11.5% ;
-
+		padding: 16px 40px;
 		border-style: none;
 		font-family: $police_roboto;
 		@include bouton-mobile;
 		@include tablet-only{
-			padding: 2.5% 6.5%;
+			padding: 19px 50px;
 			@include bouton-tablet;
 			box-shadow: map-get($shadow, tablet);
 		}
 		@include desktop-only{
 			margin: 4.4% 0 0 0;
-			padding: 2% 5.5% ;
+			padding: 20px 48px;
 			@include bouton-desktop;
 			box-shadow: map-get($shadow, desktop);
 		}

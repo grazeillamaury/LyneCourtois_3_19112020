@@ -61,7 +61,7 @@ h1 {
 }
 @media screen and (min-width: 1025px) {
   h1 {
-    font-size: 2.7em;
+    font-size: 2.2em;
   }
 }
 
@@ -74,7 +74,7 @@ p {
 }
 @media screen and (min-width: 1025px) {
   p {
-    font-size: 1.64em;
+    font-size: 1.2em;
   }
 }
 
@@ -144,7 +144,12 @@ header {
 }
 @media screen and (min-width: 1025px) {
   header {
-    padding: 1.9% 0 0.8%;
+    padding: 2% 0 1%;
+  }
+}
+@media screen and (min-width: 1350px) {
+  header {
+    padding: 1.2% 0 0.5%;
   }
 }
 header img {
@@ -160,6 +165,11 @@ header img {
     width: 20%;
   }
 }
+@media screen and (min-width: 1350px) {
+  header img {
+    width: 13%;
+  }
+}
 
 .header-menu {
   display: flex;
@@ -169,12 +179,12 @@ header img {
 }
 @media screen and (min-width: 600px) {
   .header-menu {
-    padding: 4% 28% 2%;
+    padding: 4% 34% 2% 17%;
   }
 }
 @media screen and (min-width: 1025px) {
   .header-menu {
-    padding: 2% 48% 0.8% 19.5%;
+    padding: 2% 44% 1.5% 19.5%;
   }
 }
 .header-menu img {
@@ -187,7 +197,7 @@ header img {
 }
 @media screen and (min-width: 1025px) {
   .header-menu img {
-    width: 136%;
+    width: 120%;
   }
 }
 .header-menu i {
@@ -201,7 +211,7 @@ header img {
 }
 @media screen and (min-width: 1025px) {
   .header-menu i {
-    font-size: 2.1em;
+    font-size: 1.8em;
   }
 }
 
@@ -221,6 +231,11 @@ header img {
 @media screen and (min-width: 1025px) {
   .city {
     padding: 1.4% 42% 1.2% 42%;
+  }
+}
+@media screen and (min-width: 1350px) {
+  .city {
+    padding: 1.4% 44% 1.2%;
   }
 }
 
@@ -253,8 +268,8 @@ header img {
 }
 @media screen and (min-width: 1025px) {
   .slogan h1 {
-    padding: 0 35%;
-    font-size: 2.65em;
+    padding: 0 34%;
+    font-size: 2em;
   }
 }
 .slogan p {
@@ -265,17 +280,17 @@ header img {
 @media screen and (min-width: 600px) {
   .slogan p {
     font-size: 1.2em;
-    margin: 4% 18% 9%;
+    margin: 4% 18% 7%;
   }
 }
 @media screen and (min-width: 1025px) {
   .slogan p {
-    font-size: 1.81em;
-    margin: 1.15% 31.5% 4.5%;
+    font-size: 1.4em;
+    margin: 2% 37.5% 4.5%;
   }
 }
 .slogan a {
-  padding: 4.2% 6%;
+  padding: 18px 24px;
   position: relative;
   z-index: 1;
   color: white;
@@ -303,16 +318,15 @@ header img {
 }
 @media screen and (min-width: 600px) {
   .slogan a {
-    padding: 2% 3%;
-    font-size: 1.1em;
+    padding: 22px 32px;
     border-radius: 50px;
     box-shadow: 6px 7px 4px #C6C5C5;
   }
 }
 @media screen and (min-width: 1025px) {
   .slogan a {
-    padding: 1.4% 2%;
-    font-size: 1.65em;
+    padding: 21px 33px;
+    font-size: 1.2em;
     border-radius: 100px;
     box-shadow: 8px 10px 4px #C6C5C5;
   }
@@ -330,7 +344,7 @@ header img {
 }
 @media screen and (min-width: 1025px) {
   .fonctionnement {
-    padding: 6.6% 2.7% 10% 5.7%;
+    padding: 5% 2.7% 6% 5.7%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -338,7 +352,7 @@ header img {
 }
 @media screen and (min-width: 1350px) {
   .fonctionnement {
-    padding: 6.6% 2.7% 10% 5.7%;
+    padding: 5% 14% 6% 5.7%;
   }
 }
 .fonctionnement h2 {
@@ -353,8 +367,8 @@ header img {
 }
 @media screen and (min-width: 1025px) {
   .fonctionnement h2 {
-    font-size: 2.65em;
-    margin: 0 100% 2.7% 0;
+    font-size: 2em;
+    margin: 0 100% 3% 0;
   }
 }
 .fonctionnement p {
@@ -381,12 +395,19 @@ header img {
 }
 @media screen and (min-width: 1025px) {
   .fonctionnement p {
-    padding: 2% 0;
+    padding: 1.5% 0;
     margin: 0 0 0 1%;
     border-radius: 50px;
     box-shadow: 8px 10px 4px #C6C5C5;
-    font-size: 1.5em;
-    width: 29%;
+    font-size: 1.2em;
+    width: 31%;
+  }
+}
+@media screen and (min-width: 1350px) {
+  .fonctionnement p {
+    margin: 0 0 0 8%;
+    width: 25%;
+    font-size: 1.25em;
   }
 }
 .fonctionnement p span {
@@ -408,8 +429,8 @@ header img {
 }
 @media screen and (min-width: 1025px) {
   .fonctionnement p span {
-    min-width: 40px;
-    min-height: 40px;
+    min-width: 35px;
+    min-height: 35px;
   }
 }
 .fonctionnement p i {
@@ -437,7 +458,7 @@ header img {
 }
 @media screen and (min-width: 1025px) {
   #restaurant {
-    padding: 6% 2.5% 5.2% 2.5%;
+    padding: 5% 6% 3%;
   }
 }
 #restaurant h2 {
@@ -447,13 +468,13 @@ header img {
 @media screen and (min-width: 600px) {
   #restaurant h2 {
     font-size: 1.9em;
-    margin: 0 100% 5% 0%;
+    margin: 0 100% 5% 0;
   }
 }
 @media screen and (min-width: 1025px) {
   #restaurant h2 {
-    font-size: 2.65em;
-    margin: 0 100% 2.2% 2.8%;
+    font-size: 2em;
+    margin: 0 100% 3% 0;
   }
 }
 #restaurant figure {
@@ -485,14 +506,14 @@ header img {
 @media screen and (min-width: 1025px) {
   #restaurant figure {
     width: 30%;
-    height: 400px;
+    height: 375px;
     box-shadow: 8px 10px 4px #C6C5C5;
   }
 }
 @media screen and (min-width: 1350px) {
   #restaurant figure {
-    width: 24%;
-    height: 520px;
+    width: 23%;
+    height: 450px;
   }
 }
 #restaurant figure figcaption {
@@ -509,6 +530,12 @@ header img {
     padding: 4% 7% 4%;
   }
 }
+@media screen and (min-width: 1025px) {
+  #restaurant figure figcaption {
+    min-height: 17%;
+    padding: 4% 7% 4%;
+  }
+}
 #restaurant figure figcaption h3 {
   font-size: 1.2em;
   margin-bottom: 4px;
@@ -521,8 +548,8 @@ header img {
 }
 @media screen and (min-width: 1025px) {
   #restaurant figure figcaption h3 {
-    font-size: 1.6em;
-    margin-bottom: 15px;
+    font-size: 1.3em;
+    margin-bottom: 11px;
   }
 }
 #restaurant figure figcaption p {
@@ -535,7 +562,7 @@ header img {
 }
 @media screen and (min-width: 1025px) {
   #restaurant figure figcaption p {
-    font-size: 1.4em;
+    font-size: 1em;
   }
 }
 #restaurant figure figcaption i {
@@ -563,9 +590,9 @@ header img {
 }
 @media screen and (min-width: 1025px) {
   #restaurant figure figcaption i {
-    font-size: 2.25em;
-    top: 35px;
-    right: 35px;
+    font-size: 2.1em;
+    top: 32px;
+    right: 32px;
   }
 }
 #restaurant figure img {
@@ -643,7 +670,7 @@ footer {
 }
 @media screen and (min-width: 1025px) {
   footer {
-    padding: 2.2% 35% 2.6% 9.5%;
+    padding: 3% 58% 1% 9.5%;
   }
 }
 footer h5 {
@@ -659,7 +686,7 @@ footer h5 {
 }
 @media screen and (min-width: 1025px) {
   footer h5 {
-    font-size: 1.78em;
+    font-size: 1.6em;
     margin: 0 100% 29px 0;
   }
 }
@@ -680,7 +707,7 @@ footer p:hover {
 }
 @media screen and (min-width: 1025px) {
   footer p {
-    font-size: 1.62em;
+    font-size: 1.2em;
     margin-bottom: 28px;
   }
 }
@@ -747,7 +774,7 @@ footer i {
 }
 @media screen and (min-width: 1025px) {
   .main-menu h1 {
-    padding: 4.5% 6.5% 0 6.5%;
+    padding: 6% 8% 0;
     border-radius: 100px 100px 0 0;
   }
 }
@@ -767,10 +794,10 @@ footer i {
 
 .palette {
   background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-size: cover;
 }
 @media screen and (min-width: 1350px) {
   .palette {
-    background-size: 100%;
     background-position: center 80%;
   }
 }
@@ -801,6 +828,7 @@ footer i {
 }
 @media screen and (min-width: 1350px) {
   .francaise {
+    background-size: cover;
     background-position: center 50%;
   }
 }
@@ -811,6 +839,7 @@ footer i {
 }
 @media screen and (min-width: 1025px) {
   .sens {
+    background-size: cover;
     background-position: center 90%;
   }
 }
@@ -827,7 +856,7 @@ form {
 }
 @media screen and (min-width: 1025px) {
   form {
-    padding: 3.9% 0 15%;
+    padding: 4% 0 12%;
   }
 }
 
@@ -837,12 +866,12 @@ form {
 }
 @media screen and (min-width: 600px) {
   .menu {
-    margin: 0 6% 10%;
+    margin: 0 6% 8%;
   }
 }
 @media screen and (min-width: 1025px) {
   .menu {
-    margin: 0 9% 6.5% 9%;
+    margin: 0 9% 7%;
   }
 }
 
@@ -858,7 +887,7 @@ h2 {
 }
 @media screen and (min-width: 1025px) {
   h2 {
-    font-size: 1.75em;
+    font-size: 1.3em;
     margin: 0 1.7% 39px;
   }
 }
@@ -1003,7 +1032,7 @@ h2 span {
 }
 @media screen and (min-width: 1025px) {
   .choix-text h3 {
-    font-size: 1.6em;
+    font-size: 1.2em;
     margin-bottom: 5px;
   }
 }
@@ -1019,12 +1048,7 @@ h2 span {
 }
 @media screen and (min-width: 600px) {
   .choix-text p, .choix-text span {
-    font-size: 1em;
-  }
-}
-@media screen and (min-width: 1025px) {
-  .choix-text p, .choix-text span {
-    font-size: 1.36em;
+    font-size: 0.9em;
   }
 }
 .choix-text .flex-choix {
@@ -1080,7 +1104,7 @@ h2 span {
 
 button {
   margin: 3% 0 0 0;
-  padding: 4.2% 11.5%;
+  padding: 16px 40px;
   border-style: none;
   font-family: "Roboto", sans-serif;
   position: relative;
@@ -1110,8 +1134,7 @@ button::after {
 }
 @media screen and (min-width: 600px) {
   button {
-    padding: 2.5% 6.5%;
-    font-size: 1.1em;
+    padding: 19px 50px;
     border-radius: 50px;
     box-shadow: 6px 7px 4px #C6C5C5;
   }
@@ -1119,8 +1142,8 @@ button::after {
 @media screen and (min-width: 1025px) {
   button {
     margin: 4.4% 0 0 0;
-    padding: 2% 5.5%;
-    font-size: 1.65em;
+    padding: 20px 48px;
+    font-size: 1.2em;
     border-radius: 100px;
     box-shadow: 8px 10px 4px #C6C5C5;
   }
