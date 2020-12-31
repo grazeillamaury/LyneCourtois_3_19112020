@@ -56,7 +56,7 @@ h1 {
 }
 @media screen and (min-width: 600px) {
   h1 {
-    font-size: 2.1em;
+    font-size: 1.9em;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -71,11 +71,6 @@ a {
 
 p {
   font-size: 1.1em;
-}
-@media screen and (min-width: 600px) {
-  p {
-    font-size: 1.3em;
-  }
 }
 @media screen and (min-width: 1025px) {
   p {
@@ -143,7 +138,7 @@ header {
 }
 @media screen and (min-width: 600px) {
   header {
-    padding: 4% 0 2%;
+    padding: 3% 0 2%;
     box-shadow: 0 6px 4px rgba(113, 109, 109, 0.31);
   }
 }
@@ -157,7 +152,7 @@ header img {
 }
 @media screen and (min-width: 600px) {
   header img {
-    width: 30%;
+    width: 37%;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -174,7 +169,7 @@ header img {
 }
 @media screen and (min-width: 600px) {
   .header-menu {
-    padding: 4% 28% 2% 25%;
+    padding: 4% 28% 2%;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -220,7 +215,7 @@ header img {
 }
 @media screen and (min-width: 600px) {
   .city {
-    padding: 4% 38% 4% 40%;
+    padding: 2.5% 38% 1.5% 40%;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -237,7 +232,7 @@ header img {
 }
 @media screen and (min-width: 600px) {
   .slogan {
-    padding: 10.5% 0 19% 3%;
+    padding: 8% 0 12% 3%;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -252,8 +247,8 @@ header img {
 }
 @media screen and (min-width: 600px) {
   .slogan h1 {
-    padding: 0 20%;
-    font-size: 2.3em;
+    padding: 0 14%;
+    font-size: 1.9em;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -269,7 +264,7 @@ header img {
 }
 @media screen and (min-width: 600px) {
   .slogan p {
-    font-size: 1.5em;
+    font-size: 1.2em;
     margin: 4% 18% 9%;
   }
 }
@@ -308,8 +303,8 @@ header img {
 }
 @media screen and (min-width: 600px) {
   .slogan a {
-    padding: 3% 4%;
-    font-size: 1.3em;
+    padding: 2% 3%;
+    font-size: 1.1em;
     border-radius: 50px;
     box-shadow: 6px 7px 4px #C6C5C5;
   }
@@ -327,6 +322,11 @@ header img {
 .fonctionnement {
   padding: 13.5% 0 11.5% 5%;
   background-color: #ffffff;
+}
+@media screen and (min-width: 600px) {
+  .fonctionnement {
+    padding: 8% 0% 9% 5%;
+  }
 }
 @media screen and (min-width: 1025px) {
   .fonctionnement {
@@ -347,8 +347,8 @@ header img {
 }
 @media screen and (min-width: 600px) {
   .fonctionnement h2 {
-    font-size: 2.3em;
-    margin: 0 1% 7%;
+    font-size: 1.9em;
+    margin: 0 1% 5%;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -375,7 +375,7 @@ header img {
 }
 @media screen and (min-width: 600px) {
   .fonctionnement p {
-    padding: 4% 0;
+    padding: 2.5% 0;
     box-shadow: 6px 7px 4px #C6C5C5;
   }
 }
@@ -432,7 +432,7 @@ header img {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 14.5% 5% 12.5%;
+    padding: 8% 5% 9%;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -446,8 +446,8 @@ header img {
 }
 @media screen and (min-width: 600px) {
   #restaurant h2 {
-    font-size: 2.3em;
-    margin: 0 100% 6% 0%;
+    font-size: 1.9em;
+    margin: 0 100% 5% 0%;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -478,7 +478,7 @@ header img {
     width: 48%;
     height: 300px;
     border-radius: 30px;
-    margin-bottom: 3%;
+    margin-bottom: 5%;
     box-shadow: 6px 7px 4px #C6C5C5;
   }
 }
@@ -506,6 +506,7 @@ header img {
 @media screen and (min-width: 600px) {
   #restaurant figure figcaption {
     min-height: 20%;
+    padding: 4% 7% 4%;
   }
 }
 #restaurant figure figcaption h3 {
@@ -514,7 +515,7 @@ header img {
 }
 @media screen and (min-width: 600px) {
   #restaurant figure figcaption h3 {
-    font-size: 1.3em;
+    font-size: 1.2em;
     margin-bottom: 6px;
   }
 }
@@ -526,6 +527,11 @@ header img {
 }
 #restaurant figure figcaption p {
   font-size: 1.15em;
+}
+@media screen and (min-width: 600px) {
+  #restaurant figure figcaption p {
+    font-size: 1em;
+  }
 }
 @media screen and (min-width: 1025px) {
   #restaurant figure figcaption p {
@@ -550,9 +556,9 @@ header img {
 }
 @media screen and (min-width: 600px) {
   #restaurant figure figcaption i {
-    font-size: 1.9em;
-    top: 20px;
-    right: 20px;
+    font-size: 1.8em;
+    top: 30px;
+    right: 30px;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -668,8 +674,8 @@ footer p:hover {
 }
 @media screen and (min-width: 600px) {
   footer p {
-    font-size: 1.2em;
-    margin-bottom: 15px;
+    font-size: 1.1em;
+    margin-bottom: 17px;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -683,7 +689,7 @@ footer i {
 }
 @media screen and (min-width: 600px) {
   footer i {
-    margin-right: 13px;
+    margin-right: 14px;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -735,7 +741,7 @@ footer i {
 }
 @media screen and (min-width: 600px) {
   .main-menu h1 {
-    padding: 4% 6% 0 6%;
+    padding: 6% 8% 0 6%;
     border-radius: 75px 75px 0 0;
   }
 }
@@ -831,7 +837,7 @@ form {
 }
 @media screen and (min-width: 600px) {
   .menu {
-    margin: 0 6% 9% 6%;
+    margin: 0 6% 10%;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -846,7 +852,7 @@ h2 {
 }
 @media screen and (min-width: 600px) {
   h2 {
-    font-size: 1.3em;
+    font-size: 1.2em;
     margin: 0 1.6% 30px;
   }
 }
@@ -862,13 +868,12 @@ h2 span {
 }
 @media screen and (min-width: 600px) {
   h2 span {
-    border-bottom: 3px #99e2d0 solid;
-    padding-bottom: 6.5px;
+    padding-bottom: 6px;
   }
 }
 @media screen and (min-width: 1025px) {
   h2 span {
-    border-bottom: 4px #99e2d0 solid;
+    border-bottom-width: 4px;
     padding-bottom: 9px;
   }
 }
@@ -993,7 +998,7 @@ h2 span {
 }
 @media screen and (min-width: 600px) {
   .choix-text h3 {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 }
 @media screen and (min-width: 1025px) {
@@ -1003,20 +1008,22 @@ h2 span {
   }
 }
 .choix-text p {
-  font-size: 1.01em;
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   display: block;
 }
+.choix-text p, .choix-text span {
+  font-size: 1.01em;
+}
 @media screen and (min-width: 600px) {
-  .choix-text p {
-    font-size: 1.1em;
+  .choix-text p, .choix-text span {
+    font-size: 1em;
   }
 }
 @media screen and (min-width: 1025px) {
-  .choix-text p {
+  .choix-text p, .choix-text span {
     font-size: 1.36em;
   }
 }
@@ -1103,8 +1110,8 @@ button::after {
 }
 @media screen and (min-width: 600px) {
   button {
-    padding: 3.5% 9.5%;
-    font-size: 1.3em;
+    padding: 2.5% 6.5%;
+    font-size: 1.1em;
     border-radius: 50px;
     box-shadow: 6px 7px 4px #C6C5C5;
   }

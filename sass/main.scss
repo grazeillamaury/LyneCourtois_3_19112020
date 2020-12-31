@@ -7,7 +7,7 @@
 	$color-background-secondary : #f6f6f6;
 	$accueil-titre-size: (
 		mobile:1.6em,
-		tablet: 2.3em,
+		tablet: 1.9em,
 		desktop:2.65em
 	);
 
@@ -96,7 +96,7 @@
 	}
 
 	@mixin bouton-tablet {
-		font-size: 1.3em;
+		font-size: 1.1em;
 		border-radius: 50px;
 	}
 
@@ -169,7 +169,7 @@
 		font-family: 'Shrikhand', cursive;
 		font-size: 1.86em;
 		@include tablet-only{
-		    font-size: 2.1em;
+		    font-size: 1.9em;
 		}
 		@include desktop-only{
 		    font-size: 2.7em;
@@ -182,9 +182,6 @@
 
 	p{
 		font-size: 1.1em;
-		@include tablet-only{
-		    font-size: 1.3em;
-		}
 		@include desktop-only{
 			font-size: 1.64em;
 		}
@@ -242,7 +239,7 @@
 		box-shadow: 0 1px 4px #cecece;
 		padding: 6% 0 2%;
 		@include tablet-only{
-			padding: 4% 0 2%;
+			padding: 3% 0 2%;
 			box-shadow: 0 6px 4px rgba(113, 109, 109, 0.31);
 		}
 		@include desktop-only{
@@ -252,7 +249,7 @@
 		img{
 			width: 45%;
 			@include tablet-only{
-				width: 30%;
+				width: 37%;
 			}
 			@include desktop-only{
 				width: 20%;
@@ -266,7 +263,7 @@
 		padding: 6% 26% 2.5% 6.5%;
 		opacity: 1;
 		@include tablet-only{
-			padding: 4% 28% 2% 25%;
+			padding: 4% 28% 2%;
 		}
 		@include desktop-only{
 			padding: 2% 48% 0.8% 19.5%;
@@ -303,7 +300,7 @@
 		justify-content: space-between;
 		color: #353535;
 		@include tablet-only{
-			padding: 4% 38% 4% 40%;
+			padding: 2.5% 38% 1.5% 40%;
 		}
 		@include desktop-only{
 			padding: 1.4% 42% 1.2% 42%;
@@ -317,7 +314,7 @@
 		text-align: center;
 		background-color: $color-background-secondary;
 		@include tablet-only{
-			padding: 10.5% 0 19% 3%;
+			padding: 8% 0 12% 3%;
 		}
 		@include desktop-only{
 			padding: 4% 0 7% 0;
@@ -329,7 +326,7 @@
 			font-size: map-get($accueil-titre-size, mobile);
 			padding: 0 21% 0 14%;
 			@include tablet-only{
-				padding: 0 20%;
+				padding: 0 14%;
 				font-size: map-get($accueil-titre-size, tablet);
 			}
 			@include desktop-only{
@@ -343,7 +340,7 @@
 			margin: 3% 0 12% 0;
 			color: #353535;
 			@include tablet-only{
-				font-size: 1.5em;
+				font-size: 1.2em;
 				margin: 4% 18% 9%;
 			}
 			@include desktop-only{
@@ -356,7 +353,7 @@
 			padding: 4.2% 6%;
 			@include bouton-mobile;
 			@include tablet-only{
-				padding: 3% 4%;
+				padding: 2% 3%;
 				@include bouton-tablet;
 				box-shadow: map-get($shadow, tablet);
 			}
@@ -373,6 +370,9 @@
 	.fonctionnement{
 		padding: 13.5% 0 11.5% 5%;
 		background-color: $color-background-primary;
+		@include tablet-only{
+			padding: 8% 0% 9% 5%;
+		}
 		@include desktop-only{
 			padding: 6.6% 2.7% 10% 5.7%;
 			display: flex;
@@ -388,7 +388,7 @@
 			margin: 0 0.5% 7%;
 			@include tablet-only{
 				font-size: map-get($accueil-titre-size, tablet);
-				margin: 0 1% 7%;
+				margin: 0 1% 5%;
 			}
 			@include desktop-only{
 				font-size: map-get($accueil-titre-size, desktop);
@@ -413,7 +413,7 @@
 			}
 
 			@include tablet-only{
-				padding: 4% 0;
+				padding: 2.5% 0;
 				box-shadow: map-get($shadow, tablet);
 			}
 			@include desktop-only{
@@ -466,7 +466,7 @@
 			display: flex;
 			justify-content: space-between;
 			flex-wrap: wrap;
-			padding:14.5% 5% 12.5%;
+			padding: 8% 5% 9%;
 		}
 		@include desktop-only{
 			padding:6% 2.5% 5.2% 2.5%;
@@ -477,7 +477,7 @@
 			margin-bottom: 6%;
 			@include tablet-only{
 				font-size: map-get($accueil-titre-size, tablet);
-				margin: 0 100% 6% 0%;
+				margin: 0 100% 5% 0%;
 			}
 			@include desktop-only{
 				font-size: map-get($accueil-titre-size, desktop);
@@ -505,7 +505,7 @@
 				width: 48%;
 				height: 300px;
 				border-radius: 30px;
-				margin-bottom: 3%;
+				margin-bottom: 5%;
 				box-shadow: map-get($shadow, tablet);
 			}
 			@include desktop-only{
@@ -527,13 +527,14 @@
 				background-color: $color-background-primary;
 				@include tablet-only{
 					min-height: 20%;
+					padding: 4% 7% 4%;
 				}
 
 				h3{
 					font-size: 1.2em;
 					margin-bottom: 4px;
 					@include tablet-only{
-						font-size: 1.3em;
+						font-size: 1.2em;
 						margin-bottom: 6px;
 					}
 					@include desktop-only{
@@ -544,6 +545,9 @@
 
 				p{
 					font-size: 1.15em;
+					@include tablet-only{
+						font-size: 1em;
+					}
 					@include desktop-only{
 						font-size: 1.4em;
 					}
@@ -556,9 +560,9 @@
 					right: 26px;
 					@include icon;
 					@include tablet-only{
-						font-size: 1.9em;
-						top: 20px;
-						right: 20px;
+						font-size: 1.8em;
+						top: 30px;
+						right: 30px;
 					}
 					@include desktop-only{
 						font-size: 2.25em;
@@ -658,8 +662,8 @@
 				transition-duration: 200ms;
 			}
 			@include tablet-only{
-				font-size: 1.2em;
-				margin-bottom: 15px;
+				font-size: 1.1em;
+				margin-bottom: 17px;
 			}
 			@include desktop-only{
 				font-size: 1.62em;
@@ -670,7 +674,7 @@
 		i{
 			margin-right: 10px;
 			@include tablet-only{
-				margin-right: 13px;
+				margin-right: 14px;
 			}
 			@include desktop-only{
 				margin-right: 17px;
@@ -715,7 +719,7 @@
 	  		justify-content: space-between;
 	  		align-items: center;
 	  		@include tablet-only{
-		  		padding: 4% 6% 0 6%;
+		  		padding: 6% 8% 0 6%;
 		  		border-radius: 75px 75px 0 0;
 			}
 	  		@include desktop-only{
@@ -784,7 +788,7 @@
 		margin: 0 0 10.5% 3.7%;
 		text-align: left;
 		@include tablet-only{
-	  		margin: 0 6% 9% 6%;
+	  		margin: 0 6% 10%;
 		}
 		@include desktop-only{
 			margin: 0 9% 6.5% 9%;
@@ -795,7 +799,7 @@
 		font-size: 1.09em;
 		margin: 0 1.5% 23px;
 		@include tablet-only{
-	  		font-size: 1.3em;
+	  		font-size: 1.2em;
 			margin: 0 1.6% 30px;
 		}
 		@include desktop-only{
@@ -807,11 +811,10 @@
 			border-bottom: 3px $color-tertiary solid;
 			padding-bottom: 4px;
 			@include tablet-only{
-		  		border-bottom: 3px $color-tertiary solid;
-				padding-bottom: 6.5px;
+				padding-bottom: 6px;
 			}
 			@include desktop-only{
-				border-bottom: 4px $color-tertiary solid;
+				border-bottom-width: 4px;
 				padding-bottom: 9px;
 			}
 
@@ -904,7 +907,7 @@
 			font-size: 1.18em;
 			margin-bottom: 6px;
 			@include tablet-only{
-		  		font-size: 1.3em;
+		  		font-size: 1.2em;
 			}
 			@include desktop-only{
 				font-size: 1.6em;
@@ -913,19 +916,23 @@
 		}
 
 		p{
-			font-size: 1.01em;
 			width: 100%;
 			overflow: hidden;
 			white-space:nowrap;
 			text-overflow: ellipsis;
 			display: block;
+		}
+
+		p, span{
+			font-size: 1.01em;
 			@include tablet-only{
-		  		font-size: 1.1em;
+		  		font-size: 1em;
 			}
 			@include desktop-only{
 				font-size: 1.36em;
 			}
 		}
+
 		.flex-choix{
 			display: flex;
 		}
@@ -978,7 +985,7 @@
 		font-family: $police_roboto;
 		@include bouton-mobile;
 		@include tablet-only{
-			padding: 3.5% 9.5%;
+			padding: 2.5% 6.5%;
 			@include bouton-tablet;
 			box-shadow: map-get($shadow, tablet);
 		}
