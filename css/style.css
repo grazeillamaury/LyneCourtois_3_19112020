@@ -298,6 +298,10 @@ header img {
   background: linear-gradient(to top, #9356dc, #ff79da);
   box-shadow: 4px 5px 4px #C6C5C5;
   border-radius: 30px;
+  transition: box-shadow 300ms;
+}
+.slogan a:hover {
+  box-shadow: 9px 10px 9px #737373;
 }
 .slogan a:hover::after {
   opacity: 1;
@@ -311,7 +315,6 @@ header img {
   left: 0;
   background: linear-gradient(to top, #9b63df, #ff88de);
   opacity: 0;
-  box-shadow: 9px 10px 9px #737373;
   z-index: -1;
   transition: opacity 500ms, box-shadow 300ms;
   border-radius: 10rem;
@@ -597,7 +600,7 @@ header img {
 }
 #restaurant figure img {
   width: 100%;
-  max-height: 260%;
+  max-height: 300%;
   transition: width 700ms;
 }
 #restaurant figure img:hover {
@@ -1001,6 +1004,11 @@ h2 span {
     box-shadow: 8px 10px 4px #C6C5C5;
   }
 }
+@media screen and (min-width: 1350px) {
+  .choix:hover .choix-text {
+    width: 84%;
+  }
+}
 .choix input {
   visibility: hidden;
 }
@@ -1114,6 +1122,10 @@ button {
   background: linear-gradient(to top, #9356dc, #ff79da);
   box-shadow: 4px 5px 4px #C6C5C5;
   border-radius: 30px;
+  transition: box-shadow 300ms;
+}
+button:hover {
+  box-shadow: 9px 10px 9px #737373;
 }
 button:hover::after {
   opacity: 1;
@@ -1127,7 +1139,6 @@ button::after {
   left: 0;
   background: linear-gradient(to top, #9b63df, #ff88de);
   opacity: 0;
-  box-shadow: 9px 10px 9px #737373;
   z-index: -1;
   transition: opacity 500ms, box-shadow 300ms;
   border-radius: 10rem;
