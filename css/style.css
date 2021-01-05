@@ -676,19 +676,19 @@ footer {
     padding: 3% 58% 1% 9.5%;
   }
 }
-footer h5 {
+footer h4 {
   font-size: 1.24em;
   margin-bottom: 19px;
   font-family: "Shrikhand", cursive;
 }
 @media screen and (min-width: 600px) {
-  footer h5 {
+  footer h4 {
     font-size: 1.5em;
     margin: 0 100% 20px 0;
   }
 }
 @media screen and (min-width: 1025px) {
-  footer h5 {
+  footer h4 {
     font-size: 1.6em;
     margin: 0 100% 29px 0;
   }
