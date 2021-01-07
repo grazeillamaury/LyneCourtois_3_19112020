@@ -316,7 +316,7 @@ header img {
   background: linear-gradient(to top, #9b63df, #ff88de);
   opacity: 0;
   z-index: -1;
-  transition: opacity 500ms, box-shadow 300ms;
+  transition: opacity 500ms;
   border-radius: 10rem;
 }
 @media screen and (min-width: 600px) {
@@ -1140,7 +1140,7 @@ button::after {
   background: linear-gradient(to top, #9b63df, #ff88de);
   opacity: 0;
   z-index: -1;
-  transition: opacity 500ms, box-shadow 300ms;
+  transition: opacity 500ms;
   border-radius: 10rem;
 }
 @media screen and (min-width: 600px) {

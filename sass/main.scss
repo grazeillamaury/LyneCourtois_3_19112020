@@ -97,7 +97,7 @@
 	        background: linear-gradient( to top, $color-primary-hover, $color-secondary-hover);
 	        opacity: 0;
 	        z-index: -1;
-	        transition: opacity 500ms, box-shadow 300ms;
+	        transition: opacity 500ms;
 	        border-radius: 10rem;
 	    }
 	}
