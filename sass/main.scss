@@ -133,10 +133,10 @@
 		font-weight: 500;
 		color: #353535;
 		&:hover{
+			background-clip: content-box;
 			transition: color 200ms, font-weight 50ms;
 			font-weight: 600;
 			background: -webkit-linear-gradient(top, $color-primary 30%, $color-secondary 70%);
-    		background-clip: text;
    			-webkit-background-clip: text;
     		color: transparent;
 		}

@@ -577,10 +577,10 @@ header img {
   color: #353535;
 }
 #restaurant figure figcaption i:hover {
+  background-clip: content-box;
   transition: color 200ms, font-weight 50ms;
   font-weight: 600;
   background: -webkit-linear-gradient(top, #9356dc 30%, #ff79da 70%);
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -787,10 +787,10 @@ footer i {
   color: #353535;
 }
 .main-menu h1 i:hover {
+  background-clip: content-box;
   transition: color 200ms, font-weight 50ms;
   font-weight: 600;
   background: -webkit-linear-gradient(top, #9356dc 30%, #ff79da 70%);
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
